@@ -1,0 +1,46 @@
+{
+  "photos": [
+    {
+      "id": "e1",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/editorial/e1.webp",
+      "alt": { "fr": "Éditorial — look 1", "es": "Editorial — look 1" },
+      "credit": ""
+    },
+    {
+      "id": "e2",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/editorial/e2.webp",
+      "alt": { "fr": "Éditorial — look 2", "es": "Editorial — look 2" },
+      "credit": ""
+    },
+    {
+      "id": "e3",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/editorial/e3.webp",
+      "alt": { "fr": "Éditorial — look 3", "es": "Editorial — look 3" },
+      "credit": ""
+    },
+    {
+      "id": "e4",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/editorial/e4.webp",
+      "alt": { "fr": "Éditorial — look 4", "es": "Editorial — look 4" },
+      "credit": ""
+    },
+    {
+      "id": "e5",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/editorial/e5.webp",
+      "alt": { "fr": "Éditorial — look 5", "es": "Editorial — look 5" },
+      "credit": ""
+    },
+    {
+      "id": "e6",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/editorial/e6.webp",
+      "alt": { "fr": "Éditorial — look 6", "es": "Editorial — look 6" },
+      "credit": ""
+    }
+  ]
+}

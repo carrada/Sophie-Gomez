@@ -1,0 +1,10 @@
+{
+  "id": "hero",
+  "src": "/images/modelo/hero.webp",
+  "alt": {
+    "fr": "Sophie Gomez — book modèle",
+    "es": "Sophie Gomez — book modelo"
+  },
+  "credit": "",
+  "aspect": "aspect-[4/5] sm:aspect-[16/9]"
+}

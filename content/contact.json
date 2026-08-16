@@ -1,0 +1,25 @@
+{
+  "instagram": {
+    "actrice": "https://www.instagram.com/sophiegaelleof/?hl=es-la",
+    "modelo": "https://www.instagram.com/sophiegaelleof/?hl=es-la",
+    "silverPresence": ""
+  },
+  "imdb": "https://www.imdb.com/es/name/nm1960841/",
+  "youtube": "",
+  "emails": {
+    "actrice": "info@talentboutique.com",
+    "modelo": "contact@sophiegomez.me"
+  },
+  "pressKitPdf": "/press-kit.pdf",
+  "siteUrl": "https://sophiegomez.me",
+  "assets": {
+    "heroPortrait": "/images/hero/portrait.webp",
+    "demoReel": "",
+    "demoReelPoster": "/images/actrice/demo-reel-poster.webp",
+    "social": {
+      "instagramActrice": "https://www.instagram.com/sophiegaelleof/?hl=es-la",
+      "instagramModelo": "https://www.instagram.com/sophiegaelleof/?hl=es-la",
+      "imdb": "https://www.imdb.com/es/name/nm1960841/"
+    }
+  }
+}

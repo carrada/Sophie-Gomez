@@ -1,0 +1,317 @@
+================================================================================
+GUION / NOTAS — Reunión de seguimiento Sophie Gomez
+Sitio web portafolio (chiiko)
+Fecha reunión: mañana (seguimiento)
+Estado: scaffold profesional listo + UX avanzada; falta material real de clienta
+================================================================================
+
+OBJETIVO DE LA REUNIÓN (1 frase)
+--------------------------------
+Mostrarle cómo quedó la estructura que pidió por WhatsApp, explicar decisiones
+de diseño (hero, colores, idiomas), y cerrar qué material necesitamos de ella
+para pasar de “estructura premium” a “sitio listo para casting/agencias”.
+
+
+--------------------------------------------------------------------------------
+1. APERTURA (2 min)
+--------------------------------------------------------------------------------
+
+“Sophie, el sitio ya no es un mock suelto: ya tiene la arquitectura completa
+según lo que me mandaste el 26/7. Hoy te muestro:
+  1) dónde está cada cosa que pediste,
+  2) por qué el hero se comporta así,
+  3) por qué va oscuro (y qué alternativas hay),
+  4) qué falta pulir de mi lado y qué material necesitamos de ti.”
+
+Demo en vivo: http://localhost:3000 (o el link de preview si ya lo tienes).
+
+
+--------------------------------------------------------------------------------
+2. CÓMO VA EL SITIO HOY (resumen ejecutivo)
+--------------------------------------------------------------------------------
+
+LO QUE YA FUNCIONA
+- Sitio multi-página (no una sola landing larga).
+- Menú animado (hamburguesa / Staggered Menu).
+- Idiomas: Francés / Español / Inglés (FR por defecto; EN lo añadimos después).
+- Landing con hero de scroll + sección “Trajectoire” con caminos claros.
+- Páginas: Actrice, Modèle, Silver Présence, Press kit, Contacto.
+- Contacto segmentado (México / Europa / Modeling).
+- SEO base (títulos, Open Graph, schema Person).
+- Listo para enchufar fotos, reel, IG, IMDB y PDF cuando lleguen.
+
+LO QUE AÚN NO ES “PRODUCTO FINAL”
+- Las fotos del hero y muchas galerías son placeholders / Unsplash de prueba.
+- Demo reel, headshots reales, book modelo, redes e IMDB: pendientes de ti.
+- Algunos textos se pueden afinar contigo (tono de voz exacto).
+- Press kit PDF aún no está en el servidor.
+
+
+--------------------------------------------------------------------------------
+3. LO QUE PEDISTE POR WHATSAPP → DÓNDE ESTÁ EN EL SITIO
+--------------------------------------------------------------------------------
+(Mensaje 26/7/2026 — estructura)
+
+LANDING
+  Pediste: Nom / Photo / palabras Actrice · Modèle · Silver Présence
+           + texto de presentación + menú hamburguesa
+  Está en:  /  (home)
+  Hoy:      Hero con nombre SOPHIE GOMEZ + keywords + línea corta
+            Luego sección “Trajectoire / Trayectoria” con bio y enlaces
+            Menú: botón Menu (arriba derecha) → Accueil, Actrice, Modèle, Contact
+  Nota:     Silver Présence y Press kit van en el footer (sección “Plus”),
+            para que Actriz y Modelo no compitan con un tercer pilar en el menú.
+
+Pestaña 1 — ACTRICE
+  Pediste: Texte / Photos / Demo reel / 7 videos / IG / IMDB /
+           Contacto info@talentboutique.com
+  Está en:  /actrice
+  Orden:    Bio → barra agencia Talent Boutique → Demo reel → Fotos →
+            Perfil técnico (altura, idiomas, formación, bases) →
+            7 proyectos → links IG/IMDB + email
+  Pendiente de ti: reel real, fotos headshots, clips o links por proyecto,
+                   URL Instagram actriz, URL IMDB.
+
+Pestaña 2 — MODELO
+  Pediste: Texte / Photos (editorial y comercial) / IG /
+           Contacto contact@sophiegomez.me
+  Está en:  /modelo
+  Hoy:      Hero visual + bio + CTA Bookings + grillas Editorial y Commercial
+  Pendiente de ti: 6–12 fotos reales (editorial + commercial), IG modelo.
+
+Pestaña 3 — SILVER PRESENCE
+  Pediste: Texte / Video / IG / YouTube
+  Está en:  /silver-presence
+  Pendiente de ti: video(s), links IG y YouTube del canal.
+
+Pestaña 4 — PRESS KIT (dijiste “no estoy segura”)
+  Está en:  /press-kit (visible en footer, no en el menú principal)
+  Hoy:      Bio corta + botón descarga PDF + fotos prensa (placeholders)
+  Decisión a cerrar: ¿lo dejamos solo en footer o también en menú como “Presse”?
+
+Pestaña 5 — CONTACTO
+  Pediste:
+    Acting México: Talent Boutique
+    Acting Europe: buscando representante
+    Modeling: contact@sophiegomez.me
+  Está en:  /contacto
+  Extra:    CTA activo “Proponer representación” (mailto) para Europa,
+            no solo texto pasivo.
+
+IDIOMAS
+  Pediste brief en francés (Actrice / Modèle…).
+  Implementado: FR (default) + ES + EN en el header.
+  Pregunta: ¿EN lo dejamos o lo bajamos a solo FR/ES?
+
+
+--------------------------------------------------------------------------------
+4. EL HERO (componente de scroll) — POR QUÉ ESTÁ Y CÓMO AYUDA
+--------------------------------------------------------------------------------
+
+QUÉ ES
+- Hero de “smooth scroll”: imagen central que se abre con el scroll (clip-path),
+  fotos laterales en parallax, y al final una sección de trayectoria/caminos.
+- Scroll suave con Lenis + animaciones con Framer Motion.
+
+POR QUÉ LO PUSIMOS (no es decoración al azar)
+1) Primera impresión premium
+   Casting y bookers juzgan en segundos. Un hero estático con caja gris
+   se siente “incompleto”. Este hero da sensación de producción y cuidado.
+
+2) Retiene atención
+   El scroll invita a explorar sin forzar clicks. Reduce el rebote típico
+   de “entré, no vi nada, salí”.
+
+3) Separa “espectáculo” de “decisión”
+   Arriba: emoción / presencia / marca (SOPHIE GOMEZ).
+   Abajo: caminos claros (Actrice / Modèle / Silver / Contact) —
+   como un “menú de intenciones” al estilo del schedule del componente original.
+
+4) Diferenciación
+   La mayoría de portfolios de actriz son grid + foto. Este gesto de scroll
+   hace memorable la landing sin meter más secciones ruidosas.
+
+CÓMO AYUDA A CADA USUARIO
+- Casting / productora: llega, siente calidad, baja a “Actrice” y en <30 s
+  debería ver reel + contacto (cuando tengamos el material).
+- Booker / marca: llega, baja a “Modèle”, ve book y email de bookings.
+- Prensa: footer → Press kit.
+- Público general / redes: entiende que no es “solo una cosa”, sino
+  trayectoria con vertientes claras.
+
+IMPORTANTE DECIRLE
+“Las imágenes espaciales actuales son del demo del componente (placeholder).
+Cuando nos mandes tu foto hero y 3–4 looks fuertes, el mismo efecto
+se siente 100% tuyo — no cambia la mecánica, solo el material.”
+
+SI NO LE GUSTA EL HERO
+Opciones a ofrecerle en la reunión:
+  A) Mantener este hero y solo cambiar fotos/textos (recomendado).
+  B) Hero más simple: foto full-bleed + nombre + 2 CTAs (menos “wow”, más directo).
+  C) Mitad: full-bleed con foto suya + scroll corto sin tantas parallax.
+
+
+--------------------------------------------------------------------------------
+5. COLORES — POR QUÉ OSCURO Y OPCIONES PARA CAMBIAR
+--------------------------------------------------------------------------------
+
+POR QUÉ NEGRO / ZINC / NEUTRAL OSCURO
+- Encaja con cine, showreel y fotografía: la imagen “gana”, no el fondo.
+- Contraste alto para tipografía blanca (legibilidad en casting).
+- Sensación editorial / premium (no “landing de startup colorida”).
+- Funciona bien con fotos en B&N o color saturado.
+- Es coherente con lo que pediste desde el inicio (modo oscuro inmersivo).
+
+PALETA ACTUAL (en palabras simples)
+- Fondo: casi negro (neutral/zinc 950)
+- Texto: blanco / gris claro
+- Secundario: grises medios para labels y credits
+- Acento: el blanco mismo (sin morado ni colores de moda “AI”)
+
+OPCIONES SI QUIERE CAMBIAR (decidir en reunión)
+1) Mantener oscuro (recomendado para casting/cine).
+2) Oscuro + acento de marca
+   Ej. un solo color (dorado suave, terracota, azul noche) en links/CTAs.
+   Pedirle: “¿tienes un color que sientas tuyo?”
+3) Claro / editorial día
+   Fondo crema o blanco, tipografía negra — más “magazine”, menos “cine”.
+   Implica rediseñar contraste del menú y del hero.
+4) Dual
+   Home oscura (impacto) + páginas internas más claras (lectura).
+   Más trabajo, pero posible en una fase 2.
+
+PREGUNTA PARA ELLA
+“¿Prefieres que el sitio se sienta más cine (oscuro) o más moda impresa (claro)?”
+
+
+--------------------------------------------------------------------------------
+6. DETALLES QUE AÚN FALTAN PULIR (además del material)
+--------------------------------------------------------------------------------
+(Cosas de producto/diseño/copy — no dependen solo de archivos)
+
+COPY / TONO
+- Afinar bios (landing, actriz, modelo, silver) con su voz real.
+- Decidir si el tono “órbita / trayectoria” del hero le gusta o
+  volvemos a un tono más directo “Actriz · Modelo” sin metáfora.
+- Revisar títulos de los 7 proyectos: ¿son reales / oficiales / a cambiar?
+
+NAVEGACIÓN Y JERARQUÍA
+- Confirmar: Silver Presence fuera del menú principal (footer) — ¿OK?
+- Confirmar: Press kit solo footer vs también “Presse” en menú.
+- Tamaño del menú: ya agrandamos letras; validar en su teléfono.
+
+HERO
+- Sustituir Unsplash por su material.
+- Ajustar copy del hero a su gusto.
+- Probar en iPhone (autoplay/poster del reel en móvil cuando exista).
+
+ACTRIZ
+- Validar datos técnicos (altura, idiomas, formación, bases MX/EU).
+- Decidir si cada proyecto lleva clip, still, o link externo (IMDB/Vimeo).
+
+MODELO
+- Definir cuántas fotos editorial vs commercial (ideal 6–12 total).
+- Créditos de fotógrafo cuando existan.
+
+CONTACTO / LEGAL
+- Confirmar emails definitivos y si Europa usa contact@sophiegomez.me
+  o un correo aparte.
+- Aviso legal / créditos / © si lo quiere.
+
+TÉCNICO / LANZAMIENTO
+- Dominio sophiegomez.me apuntando al hosting.
+- Favicon / apple icon con su marca.
+- PDF press kit subido a /public/press-kit.pdf
+- Prueba de velocidad con fotos reales (WebP).
+- Checklist de launch: IG, IMDB, reel, 1 foto hero mínima.
+
+
+--------------------------------------------------------------------------------
+7. CHECKLIST DE MATERIAL QUE NECESITAMOS DE ELLA (prioridad)
+--------------------------------------------------------------------------------
+
+P0 — BLOQUEA LA PERCEPCIÓN DE CALIDAD (pedir sí o sí)
+[ ] 1 retrato hero (horizontal o vertical alta calidad, cara legible)
+[ ] Demo reel (link Vimeo/YouTube o archivo) + frame poster para móvil
+[ ] 6–12 fotos modelo (mitad editorial / mitad commercial si se puede)
+[ ] URLs reales: Instagram actriz, Instagram modelo, IMDB
+
+P1 — COMPLEMENTA
+[ ] 3–6 headshots / fotos actriz
+[ ] 2–3 clips o links por proyectos clave
+[ ] Links IG + YouTube Silver Presence
+[ ] PDF press kit (bio corta/larga + fotos HD + créditos)
+
+P2 — NICE TO HAVE
+[ ] Logo o wordmark si existe
+[ ] Preferencia de color acento
+[ ] Lista oficial de filmografía (títulos correctos + años + rol)
+[ ] Créditos fotógrafos para pie de foto
+
+
+--------------------------------------------------------------------------------
+8. ORDEN SUGERIDO PARA PRESENTAR EN PANTALLA (10–15 min)
+--------------------------------------------------------------------------------
+
+1. Home — scroll del hero + sección Trajectoire (1–2 min)
+2. Menú — abrir / cerrar, cambiar FR → ES → EN (30 s)
+3. /actrice — orden reel → fotos → perfil → proyectos → contacto (2 min)
+4. /modelo — editorial / commercial + bookings (1 min)
+5. /silver-presence — rápido (30 s)
+6. /contacto — México / Europa / Modeling (1 min)
+7. Footer — Press kit + Silver (30 s)
+8. Cerrar con: material P0 + decisiones (hero A/B/C, color, press kit en menú)
+
+
+--------------------------------------------------------------------------------
+9. DECISIONES A CERRAR EN LA REUNIÓN
+--------------------------------------------------------------------------------
+
+[ ] ¿Hero actual (scroll) / hero simple / híbrido?
+[ ] ¿Paleta: oscuro puro / oscuro + acento / claro?
+[ ] ¿Idiomas: FR+ES+EN o solo FR+ES?
+[ ] ¿Silver Presence: solo footer o vuelve al menú?
+[ ] ¿Press kit: solo footer o también menú “Presse”?
+[ ] ¿Fecha tentativa de entrega de material P0?
+[ ] ¿Fecha objetivo de publicación online?
+
+
+--------------------------------------------------------------------------------
+10. FRASES ÚTILES SI HAY DUDAS
+--------------------------------------------------------------------------------
+
+Si dice “se ve vacío”:
+“Es a propósito: mejor estructura limpia + 3 fotos reales que 12 cajas grises.
+En cuanto nos mandes el P0, el sitio cambia de categoría.”
+
+Si dice “¿por qué no está todo en una sola página?”:
+“Porque cada disciplina tiene contacto y audiencia distinta. Un casting no
+quiere ver el book de modelo primero; un booker no quiere 7 clips de cine.
+Así cada link se puede compartir solo.”
+
+Si dice “el hero espacial no soy yo”:
+“Totalmente: son placeholders del componente. El efecto se queda; tu cara
+y tu book lo hacen tuyo. Si prefieres algo más directo, lo simplificamos.”
+
+Si pregunta plazos:
+“Con material P0 completo, en unos días queda lista una versión presentable
+para casting. Sin material, la estructura ya está, pero no transmite aún
+la confianza que necesitas.”
+
+
+--------------------------------------------------------------------------------
+11. CIERRE
+--------------------------------------------------------------------------------
+
+“Resumen: la estructura que pediste ya está montada y navegable.
+Lo que falta para que el sitio ‘venda’ es tu material + 3–4 decisiones
+de gusto (hero, color, menú Silver/Press, idiomas).
+Te mando por WhatsApp la lista P0 en un mensaje corto después de la call.”
+
+Después de la reunión: enviar checklist P0 + resumen de lo decidido.
+
+
+================================================================================
+FIN DEL GUION
+Archivo: docs/reunion-seguimiento-sophie.txt
+================================================================================

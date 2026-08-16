@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "name": "Sophie Gaëlle Gomez",
+    "menu": "[ Menú ]",
+    "closeMenu": "[ Cerrar ]"
+  },
+  "menu": {
+    "home": "Inicio",
+    "actrice": "Actriz",
+    "modelo": "Modelo",
+    "silverPresence": "Silver Presence",
+    "contacto": "Contacto"
+  },
+  "landing": {
+    "keywords": "Actriz · Modelo · Silver Presence",
+    "keywordsSecondary": "Silver Presence",
+    "heroLine": "Escena, imagen y voz — entre México y Europa.",
+    "introTitle": "Trayectoria",
+    "bio": "Sophie Gomez construye una trayectoria entre la escena, el cine y la imagen. Como un lanzamiento: precisión, silencio, impacto. Entre México y Europa, habita cada cuadro — actriz, modelo, voz.",
+    "photoPlaceholder": "Imagen hero",
+    "ctaActrice": "Book actriz",
+    "ctaModelo": "Book modelo",
+    "silverPresenceLink": "Silver Presence",
+    "pathActrice": "Escena y cine",
+    "pathModelo": "Editorial y campañas",
+    "pathSilver": "Voz y relato",
+    "pathContact": "Trabajar juntos",
+    "pathLabel": "Destino"
+  },
+  "actrice": {
+    "title": "Actriz",
+    "bio": "Formada en escena clásica y contemporánea, Sophie ha construido una trayectoria entre el cine de autor, el teatro de cámara y la narrativa audiovisual independiente. Busca roles donde el silencio, el cuerpo y la presencia importan tanto como la palabra.",
+    "demoReelTitle": "Demo reel",
+    "photosTitle": "Fotos",
+    "projectsTitle": "Proyectos",
+    "profileTitle": "Perfil",
+    "profileHeight": "Estatura",
+    "profileLanguages": "Idiomas",
+    "profileTraining": "Formación",
+    "profileBases": "Bases",
+    "agencyLabel": "Representación México",
+    "instagram": "Instagram",
+    "imdb": "IMDB",
+    "contact": "Contacto",
+    "contactEmail": "info@talentboutique.com"
+  },
+  "modelo": {
+    "title": "Modelo",
+    "bio": "Imagen versátil entre lo editorial y lo comercial: Sophie trabaja la luz, la línea y la postura como lenguaje visual. Cada serie explora un registro — moda, belleza, campaña — con la misma exigencia estética.",
+    "editorialTitle": "Editorial",
+    "commercialTitle": "Comercial",
+    "bookingsTitle": "Bookings",
+    "bookingsCta": "Reservar campaña o shooting",
+    "instagram": "Instagram",
+    "contact": "Contacto",
+    "contactEmail": "contact@sophiegomez.me"
+  },
+  "silverPresence": {
+    "title": "Silver Presence",
+    "bio": "Silver Presence es el proyecto de comunicación de Sophie: un espacio dedicado a la voz, la presencia y la narrativa. A través de videos y contenidos editoriales, explora cómo se construyen la imagen y la palabra.",
+    "videoTitle": "Video",
+    "instagram": "Instagram",
+    "youtube": "YouTube"
+  },
+  "pressKit": {
+    "title": "Press kit",
+    "bio": "Recursos de prensa: biografía, fotos en alta definición y créditos para medios y casting.",
+    "download": "Descargar PDF",
+    "photosTitle": "Fotos de prensa"
+  },
+  "contacto": {
+    "title": "Contacto",
+    "headline": "Trabajemos juntos",
+    "actingMexico": "Acting — México",
+    "actingMexicoAgency": "Talent Boutique",
+    "direct": "Sophie Gaëlle Gomez",
+    "instagram": "Instagram",
+    "imdb": "IMDB",
+    "modeling": "Modeling",
+    "copyright": "Todos los derechos reservados."
+  },
+  "footer": {
+    "tagline": "Actriz · Modelo",
+    "contact": "Contacto",
+    "copyright": "Todos los derechos reservados.",
+    "socials": "Redes",
+    "secondary": "Más"
+  },
+  "common": {
+    "videoPlaceholder": "Video",
+    "photoPlaceholder": "Foto",
+    "loading": "Cargando",
+    "skipToContent": "Ir al contenido",
+    "watchReel": "Ver reel"
+  },
+  "meta": {
+    "title": "Sophie Gomez — Actriz & Modelo",
+    "description": "Portfolio de Sophie Gomez: demo reel, book actriz y modelo. México · Europa. FR / ES."
+  }
+}

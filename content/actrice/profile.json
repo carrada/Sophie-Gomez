@@ -1,0 +1,18 @@
+{
+  "height": { "fr": "1,72 m", "es": "1,72 m", "en": "5'8\"" },
+  "languages": {
+    "fr": "Français · Espagnol · Anglais",
+    "es": "Francés · Español · Inglés",
+    "en": "French · Spanish · English"
+  },
+  "training": {
+    "fr": "Formation en scène classique et contemporaine — théâtre, cinéma d'auteur et narration audiovisuelle.",
+    "es": "Formación en escena clásica y contemporánea — teatro, cine de autor y narrativa audiovisual.",
+    "en": "Training in classical and contemporary stage work — theatre, auteur cinema, and audiovisual storytelling."
+  },
+  "bases": {
+    "fr": "Mexico City · Europe",
+    "es": "Ciudad de México · Europa",
+    "en": "Mexico City · Europe"
+  }
+}

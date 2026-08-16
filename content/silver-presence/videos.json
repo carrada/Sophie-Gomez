@@ -1,0 +1,10 @@
+{
+  "mainVideo": "",
+  "videos": [
+    {
+      "id": "s1",
+      "title": { "fr": "Présence et voix", "es": "Presencia y voz" },
+      "videoUrl": ""
+    }
+  ]
+}

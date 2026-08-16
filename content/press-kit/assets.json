@@ -1,0 +1,25 @@
+{
+  "photos": [
+    {
+      "id": "pk1",
+      "aspect": "aspect-[3/4]",
+      "src": "",
+      "alt": { "fr": "Photo presse 1", "es": "Foto prensa 1" },
+      "credit": ""
+    },
+    {
+      "id": "pk2",
+      "aspect": "aspect-[3/4]",
+      "src": "",
+      "alt": { "fr": "Photo presse 2", "es": "Foto prensa 2" },
+      "credit": ""
+    },
+    {
+      "id": "pk3",
+      "aspect": "aspect-video",
+      "src": "",
+      "alt": { "fr": "Photo presse 3", "es": "Foto prensa 3" },
+      "credit": ""
+    }
+  ]
+}

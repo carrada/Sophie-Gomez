@@ -1,0 +1,527 @@
+% !TEX program = xelatex
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.1cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+
+\definecolor{ink}{HTML}{1A1A1A}
+\definecolor{mute}{HTML}{5C5C5C}
+\definecolor{line}{HTML}{E6E6E6}
+\definecolor{paper}{HTML}{FAFAFA}
+\definecolor{soft}{HTML}{F4F4F4}
+\definecolor{accent}{HTML}{111111}
+\definecolor{chiiko}{HTML}{0F0F0F}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Montserrat}
+\newfontfamily\fMontserrat{Montserrat}
+\newfontfamily\fMontserratMed{Montserrat Medium}
+\newfontfamily\fMontserratLight{Montserrat Light}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=ink,
+  urlcolor=ink,
+  pdfauthor={Chiiko},
+  pdftitle={SEO + GEO — Estrategia para Sophie Gomez},
+  pdfsubject={Estrategia de visibilidad en buscadores y motores generativos}
+}
+
+\setstretch{1.18}
+\setlist[itemize]{leftmargin=1.15em, itemsep=0.28em, topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.25em, itemsep=0.28em, topsep=0.35em}
+
+\titleformat{\section}
+  {\fMontserratMed\color{ink}\Large}
+  {\thesection.}{0.6em}{}
+\titleformat{\subsection}
+  {\fMontserratMed\color{ink}\large}
+  {\thesubsection.}{0.55em}{}
+\titleformat{\subsubsection}
+  {\fMontserratMed\color{ink}\normalsize}
+  {\thesubsubsection.}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{1.6em}{0.7em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.45em}
+
+\newcommand{\chiikologo}{%
+  \includegraphics[height=1.45cm]{../../public/chiikologosophie.png}%
+}
+
+\newcommand{\ruleline}{%
+  \par\vspace{0.35em}{\color{line}\hrule height 0.6pt}\vspace{0.85em}%
+}
+
+\newcommand{\callout}[2]{%
+  \par\noindent
+  \colorbox{soft}{%
+    \begin{minipage}{\dimexpr\textwidth-1.1cm\relax}
+      \vspace{0.45em}
+      {\sffamily\bfseries\footnotesize\color{mute}#1}\\[0.4em]
+      {\color{ink}#2}
+      \vspace{0.45em}
+    \end{minipage}%
+  }%
+  \par\vspace{0.85em}
+}
+
+\newcommand{\pillar}[3]{%
+  \par\noindent
+  \begin{minipage}{\textwidth}
+    {\sffamily\bfseries\footnotesize\color{mute}#1}\\[0.2em]
+    {\sffamily\bfseries\large\color{ink}#2}\\[0.35em]
+    {\color{ink}#3}
+  \end{minipage}
+  \par\vspace{0.35em}{\color{line}\hrule height 0.5pt}\vspace{0.75em}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{line}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[L]{\sffamily\footnotesize\color{mute}Chiiko · Estrategia SEO + GEO}
+\fancyfoot[R]{\sffamily\footnotesize\color{mute}\thepage}
+
+\begin{document}
+\thispagestyle{empty}
+
+% ===================== PORTADA =====================
+\noindent
+\begin{tikzpicture}
+  \fill[paper] (0,0) rectangle (\textwidth,4.2);
+  \node[anchor=west] at (0.25,2.85) {\chiikologo};
+  \node[anchor=east, align=right, text=ink] at (\textwidth-0.25,3.15) {%
+    {\sffamily\bfseries\large Sophie Gomez}\\[3pt]
+    {\sffamily\color{mute}\small Estrategia de visibilidad digital}\\[2pt]
+    {\sffamily\color{mute}\footnotesize Chiiko · Documento interno}
+  };
+\end{tikzpicture}
+
+\vspace{0.2cm}
+{\color{line}\hrule height 0.7pt}
+\vspace{1.4cm}
+
+{\fMontserratLight\fontsize{13}{16}\selectfont\color{mute} DOCUMENTO ESTRATÉGICO}
+
+\vspace{0.55cm}
+{\fMontserratMed\fontsize{28}{34}\selectfont\color{ink} SEO + GEO}
+
+\vspace{0.25cm}
+{\fMontserrat\fontsize{16}{22}\selectfont\color{ink} Cómo hacer que Sophie Gomez sea encontrada ---}\\[0.15em]
+{\fMontserrat\fontsize{16}{22}\selectfont\color{ink} y citada --- en Google y en las IAs conversacionales}
+
+\vspace{0.9cm}
+{\color{line}\hrule height 0.5pt}
+\vspace{0.75cm}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+  {\sffamily\footnotesize\color{mute}CLIENTE} & {\sffamily Sophie Gomez} \\[0.35em]
+  {\sffamily\footnotesize\color{mute}PREPARADO POR} & {\sffamily Chiiko} \\[0.35em]
+  {\sffamily\footnotesize\color{mute}ALCANCE} & {\sffamily Sitio sophiegomez.me · Actriz · Modelo · Silver Presence} \\[0.35em]
+  {\sffamily\footnotesize\color{mute}ENFOQUE} & {\sffamily SEO clásico + GEO (Generative Engine Optimization)} \\
+\end{tabularx}
+
+\vspace{1.35cm}
+
+\callout{LA IDEA CENTRAL}{%
+Hoy no basta con aparecer en Google. Las personas también preguntan a ChatGPT, Perplexity, Gemini y Claude.
+La estrategia correcta no elige uno u otro: construye una presencia que los buscadores \emph{indexan}
+y que las IAs \emph{entienden, confían y recomiendan}. Ese es el estándar con el que trabajamos en Chiiko.
+}
+
+\vspace{0.4cm}
+{\sffamily\small\color{mute}Una lectura clara. Sin jerga innecesaria. Con un plan ejecutable.}
+
+\newpage
+\setcounter{page}{2}
+
+% ===================== 1 =====================
+\section{Por qué esto importa ahora}
+
+Hasta hace poco, ``ser visible'' significaba rankear en Google.
+Eso sigue siendo indispensable --- y lo vamos a hacer bien ---,
+pero el comportamiento de búsqueda cambió.
+
+Una casting director, un director creativo o una marca ya no solo escriben
+\texttt{sophie gomez actriz} en Google. También preguntan:
+
+\begin{itemize}
+  \item \emph{``Actrices franco-mexicanas para cine de autor''}
+  \item \emph{``Modelos con presencia editorial entre México y Europa''}
+  \item \emph{``Quién es Sophie Gomez y dónde la contacto''}
+\end{itemize}
+
+Esas preguntas llegan a motores clásicos \textbf{y} a IAs conversacionales.
+Si el sitio no está estructurado para ambos mundos, la marca existe\ldots{} pero no se recomienda.
+
+\callout{LO QUE ESTÁ EN JUEGO}{%
+No se trata solo de tráfico. Se trata de \textbf{ser la respuesta}.
+Cuando alguien pregunta por un perfil como el de Sophie, queremos que el sitio ---
+y la entidad Sophie Gomez --- aparezcan con claridad, autoridad y datos verificables.
+}
+
+Chiiko diseña esta capa desde el principio: arquitectura, contenido, datos estructurados
+y señales de autoridad pensadas para humanos \emph{y} para máquinas que resumen el mundo.
+
+% ===================== 2 =====================
+\section{SEO y GEO, sin misterio}
+
+\subsection{SEO --- Search Engine Optimization}
+El SEO clásico trabaja para que Google (y buscadores similares) encuentren, entiendan
+y posicionen páginas. Sus piezas clave:
+
+\begin{itemize}
+  \item Página rápida, accesible y bien indexable
+  \item Títulos, meta descripciones y jerarquía de headings claros
+  \item Contenido útil alineado a intenciones de búsqueda reales
+  \item Enlaces internos coherentes y señales técnicas limpias
+  \item Experiencia móvil impecable
+\end{itemize}
+
+\subsection{GEO --- Generative Engine Optimization}
+El GEO trabaja para que los motores generativos (ChatGPT, Perplexity, Gemini, Claude, Bing Copilot\ldots)
+puedan \textbf{citar, resumir y recomendar} a Sophie con precisión.
+
+Las IAs no ``leen'' como un humano. Prefieren:
+
+\begin{itemize}
+  \item Hechos claros y verificables (quién es, qué hace, dónde trabaja, cómo contactar)
+  \item Entidades bien definidas (persona, proyectos, agencias, redes)
+  \item Contenido estructurado, no ambiguo
+  \item Fuentes consistentes entre sitio, IMDb, Instagram y menciones externas
+  \item Páginas que responden preguntas completas, no solo keywords sueltas
+\end{itemize}
+
+\subsection{La diferencia que importa}
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\textwidth}{@{}>{\sffamily\bfseries}p{3.1cm} X X@{}}
+\toprule
+{\sffamily\color{mute}\bfseries} & {\sffamily\color{mute}\bfseries SEO} & {\sffamily\color{mute}\bfseries GEO} \\
+\midrule
+Objetivo & Aparecer en resultados & Ser citado / recomendado \\
+Unidad & Página / keyword & Entidad / respuesta \\
+Señal fuerte & Relevancia + autoridad de página & Claridad factual + consistencia \\
+Éxito & Clics y posiciones & Menciones en respuestas de IA \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace{0.6em}
+En Chiiko no tratamos SEO y GEO como dos proyectos separados.
+Son \textbf{una sola estrategia de visibilidad}, con dos superficies de impacto.
+
+% ===================== 3 =====================
+\section{Principios de la estrategia Chiiko}
+
+Antes del plan táctico, cuatro principios. Son simples a propósito:
+lo sofisticado está en la ejecución.
+
+\pillar{01}{Claridad antes que volumen}{%
+Una página nítida supera a diez páginas vagas. Sophie no necesita contenido de relleno:
+necesita respuestas exactas sobre quién es, qué ofrece y cómo contactarla.}
+
+\pillar{02}{Una entidad, muchas puertas}{%
+Actriz, modelo y Silver Presence son puertas de entrada a la misma persona.
+Cada puerta tiene intención propia, pero todas refuerzan la misma entidad: Sophie Gomez.}
+
+\pillar{03}{Datos que las máquinas puedan leer}{%
+Schema.org, Open Graph, metadatos limpios, URLs predecibles, textos factuales.
+Si una IA puede parsearlo sin adivinar, gana Sophie.}
+
+\pillar{04}{Consistencia multi-fuente}{%
+Sitio + IMDb + Instagram + press kit deben decir lo mismo.
+Las IAs cruzan fuentes; las contradicciones restan confianza.}
+
+\callout{POR QUÉ ESTO FUNCIONA}{%
+La mayoría de sitios de talento se quedan en ``bonito portfolio''.
+Nosotros construimos un sistema de descubrimiento: bello para quien llega,
+legible para quien indexa, citables para quien resume.
+Esa combinación --- estética + ingeniería de visibilidad --- es donde Chiiko opera con naturalidad.
+}
+
+% ===================== 4 =====================
+\section{Mapa de intenciones: qué buscarán (humanos e IAs)}
+
+Trabajamos tres familias de intención. Cada una tiene páginas, señales y contenido asociados.
+
+\subsection{Intención de descubrimiento}
+\emph{``¿Quién es Sophie Gomez?''} · \emph{``Actriz franco-mexicana''} · \emph{``Modelo editorial México Europa''}
+
+\begin{itemize}
+  \item Landing con identidad clara (nombre, keywords, propuesta)
+  \item Bio corta y bio extendida, consistentes
+  \item Enlaces a Actriz / Modelo / Silver Presence / Contacto
+\end{itemize}
+
+\subsection{Intención de evaluación}
+\emph{``Ver demo reel''} · \emph{``Book de fotos''} · \emph{``Proyectos recientes''} · \emph{``Press kit''}
+
+\begin{itemize}
+  \item Media bien etiquetada (títulos, alt text, captions factuales)
+  \item Proyectos con rol, año y contexto
+  \item Press kit descargable y página de prensa limpia
+\end{itemize}
+
+\subsection{Intención de contacto / booking}
+\emph{``Contactar Sophie Gomez''} · \emph{``Agencia Talent Boutique''} · \emph{``Bookings modelo''}
+
+\begin{itemize}
+  \item Página de contacto con entidades claras (agencia / directo / modeling)
+  \item CTAs mailto visibles y coherentes
+  \item Instagram e IMDb enlazados como prueba social verificable
+\end{itemize}
+
+Esta taxonomía no es teórica: guía qué textos escribimos, qué schema usamos
+y qué preguntas debería poder responder una IA después de leer el sitio.
+
+% ===================== 5 =====================
+\section{Pilares técnicos (la base que no se ve, pero decide)}
+
+\subsection{Rendimiento y crawlabilidad}
+\begin{itemize}
+  \item Core Web Vitals en zona saludable (LCP, INP, CLS)
+  \item HTML semántico, sin bloquear el indexado de contenido clave
+  \item Sitemap XML + robots.txt limpios
+  \item Canonicals correctos por idioma / ruta
+  \item Imágenes optimizadas (WebP, dimensiones explícitas, lazy load inteligente)
+\end{itemize}
+
+\subsection{Arquitectura de información}
+El sitio ya tiene una estructura fuerte. La estrategia la refuerza:
+
+\begin{enumerate}
+  \item \textbf{/} --- Entidad + propuesta + rutas
+  \item \textbf{/actrice} --- Prueba de talento actoral (reel, fotos, proyectos, links)
+  \item \textbf{/modelo} --- Prueba de imagen (editorial, comercial, bookings)
+  \item \textbf{/silver-presence} --- Proyecto de voz / comunicación
+  \item \textbf{/press-kit} --- Activo de prensa
+  \item \textbf{/contacto} --- Conversión
+\end{enumerate}
+
+Cada ruta debe responder una pregunta dominante.
+Eso ayuda a Google a rankear\ldots{} y a las IAs a citar el fragmento correcto.
+
+\subsection{Internacionalización (FR / ES / EN)}
+El multilingualismo es una ventaja competitiva si se ejecuta bien:
+
+\begin{itemize}
+  \item \texttt{hreflang} correcto entre locales
+  \item Contenido realmente traducido (no solo UI)
+  \item Nombres propios y datos factuales idénticos en todos los idiomas
+  \item Evitar contenido duplicado ``pobre'' entre versiones
+\end{itemize}
+
+Las IAs valoran la coherencia cross-language: si FR, ES y EN describen a la misma persona
+con los mismos hechos, la entidad se fortalece.
+
+% ===================== 6 =====================
+\section{Datos estructurados: hablar el idioma de las máquinas}
+
+Implementaremos (y mantendremos) markup Schema.org orientado a talento:
+
+\begin{itemize}
+  \item \textbf{Person} --- Sophie Gomez (nombre, jobTitle, nationality, knowsLanguage, sameAs)
+  \item \textbf{sameAs} --- IMDb, Instagram, y otras fuentes canónicas
+  \item \textbf{Organization} / agente cuando aplique (Talent Boutique)
+  \item \textbf{WebSite} + \textbf{WebPage} por sección
+  \item \textbf{VideoObject} / \textbf{ImageObject} en media relevante
+  \item \textbf{BreadcrumbList} para contexto de navegación
+\end{itemize}
+
+\callout{DETALLE CHIIKO}{%
+El \texttt{sameAs} bien hecho es una de las señales GEO más subestimadas:
+le dice a la IA ``esta página y este perfil de IMDb son la misma persona''.
+Eso reduce ambigüedad y aumenta la probabilidad de cita correcta.
+No es magia; es precisión. Y la precisión se nota.
+}
+
+También cuidaremos Open Graph y Twitter/X cards para que cada compartido
+refuerce nombre, rol y visual de marca --- otra capa de consistencia entity-first.
+
+% ===================== 7 =====================
+\section{Contenido pensado para ser citado}
+
+GEO no pide blogs interminables. Pide \textbf{bloques respondibles}.
+
+\subsection{Bloques que vamos a fortalecer}
+\begin{enumerate}
+  \item \textbf{Definición de entidad} (2--3 frases factuales al inicio de cada pilar)
+  \item \textbf{Hechos clave} (idiomas, bases, perfiles, contactos --- cuando apliquen)
+  \item \textbf{Prueba} (proyectos, media, press)
+  \item \textbf{Acción} (contacto / booking / redes)
+\end{enumerate}
+
+\subsection{Estilo de redacción para IA + humano}
+\begin{itemize}
+  \item Sujeto claro: ``Sophie Gomez es\ldots'' (no solo metáforas)
+  \item Una idea por párrafo corto
+  \item Evitar claims vacíos (``la mejor'', ``única'') sin evidencia
+  \item Preferir datos verificables y enlaces externos consistentes
+  \item FAQs reales solo si responden dudas genuinas de casting / booking
+\end{itemize}
+
+\subsection{Silver Presence como activo GEO}
+Silver Presence no es decoración: es contenido de voz y relato.
+Bien etiquetado, puede capturar búsquedas y preguntas sobre comunicación,
+presencia y narrativa --- ampliando el radio semántico de Sophie sin diluir su marca.
+
+% ===================== 8 =====================
+\section{Autoridad off-site: lo que rodea al sitio}
+
+Un sitio excelente pierde fuerza si el mundo exterior dice otra cosa.
+Por eso la estrategia incluye alineación externa:
+
+\begin{itemize}
+  \item IMDb completo y coherente con el sitio
+  \item Instagram activo y enlazado (mismo handle canónico)
+  \item Press kit alineado a bios del sitio
+  \item Menciones en medios / festivales / credits cuando existan
+  \item NAP-like consistency para talento: nombre, roles, contactos, sin variaciones raras
+\end{itemize}
+
+Chiiko coordina el sitio como \textbf{fuente canónica}:
+el lugar donde la verdad de marca está mejor escrita.
+Cuando otras fuentes apuntan aquí, SEO y GEO se refuerzan mutuamente.
+
+% ===================== 9 =====================
+\section{Plan por fases}
+
+\subsection{Fase 1 --- Cimientos (rápida, alto impacto)}
+\begin{itemize}
+  \item Auditoría técnica (indexación, performance, metadata, i18n)
+  \item Titles / descriptions por ruta y idioma
+  \item Schema Person + sameAs (IMDb, Instagram)
+  \item Alt texts y títulos de media con criterio factual
+  \item Contacto y CTAs revisados como nodos de conversión
+\end{itemize}
+
+\subsection{Fase 2 --- Autoridad de contenido}
+\begin{itemize}
+  \item Bios ``citables'' por pilar (Actriz / Modelo / Silver Presence)
+  \item Fichas de proyecto más parseables (rol, año, formato)
+  \item Press kit como activo SEO (página + PDF + datos)
+  \item Refuerzo de enlazado interno semántico
+\end{itemize}
+
+\subsection{Fase 3 --- GEO avanzado}
+\begin{itemize}
+  \item Bloques pregunta-respuesta donde aporte valor real
+  \item Monitoreo de menciones en motores generativos
+  \item Ajustes de entidad según cómo las IAs resumen a Sophie
+  \item Expansión controlada de contenidos solo si hay demanda real
+\end{itemize}
+
+\subsection{Fase 4 --- Iteración continua}
+\begin{itemize}
+  \item Medición mensual (Search Console + señales GEO cualitativas)
+  \item Actualización de proyectos / media / credits
+  \item Pruebas A/B ligeras en titles y CTAs
+  \item Mantenimiento de consistencia multi-fuente
+\end{itemize}
+
+% ===================== 10 =====================
+\section{Cómo medimos el éxito}
+
+No prometemos vanidad. Medimos lo que mueve carrera y booking.
+
+\subsection{Indicadores SEO}
+\begin{itemize}
+  \item Impresiones y clics branded / non-branded en Search Console
+  \item Posiciones para consultas de descubrimiento y contacto
+  \item Indexación completa de rutas clave
+  \item Rendimiento (LCP y errores de crawl en cero drama)
+\end{itemize}
+
+\subsection{Indicadores GEO (cualitativos + emergentes)}
+\begin{itemize}
+  \item ¿Las IAs describen a Sophie con datos correctos?
+  \item ¿Mencionan actriz / modelo / Silver Presence sin inventar?
+  \item ¿Aparecen IMDb, Instagram o el sitio como fuentes?
+  \item ¿El contacto recomendado es el correcto?
+\end{itemize}
+
+\callout{ESTÁNDAR CHIIKO}{%
+Si una IA resume mal a Sophie, no es ``malo de la IA'': es una señal de que
+el grafo de información aún tiene huecos. Nosotros cerramos esos huecos
+hasta que la respuesta salga limpia. Esa obsesión por la precisión es,
+en la práctica, la diferencia entre un portfolio y una marca descubrible.
+}
+
+% ===================== 11 =====================
+\section{Riesgos que evitamos (y otros cometen)}
+
+\begin{enumerate}
+  \item \textbf{Keyword stuffing} --- espanta humanos y ya no engaña algoritmos.
+  \item \textbf{Contenido genérico de IA sin edición} --- irónico: las IAs detectan vacío.
+  \item \textbf{Ignorar entity consistency} --- bios distintas en cada plataforma.
+  \item \textbf{SEO solo técnico sin historia} --- rankea poco si no hay sustancia.
+  \item \textbf{GEO cosmético} --- ``optimizar para ChatGPT'' sin datos estructurados reales.
+  \item \textbf{Multiidioma descuidado} --- tres idiomas débiles pierden frente a uno excelente + hreflang bien hecho.
+\end{enumerate}
+
+Nuestro enfoque es sobrio: menos teatro, más señales correctas.
+
+% ===================== 12 =====================
+\section{Qué hace distinta esta ejecución}
+
+Hay agencias que entregan checklists.
+Hay freelancers que entregan plugins.
+Chiiko entrega un sistema integrado con el producto digital:
+
+\begin{itemize}
+  \item El sitio ya está pensado como composición de marca, no como plantilla.
+  \item La arquitectura de rutas ya separa intenciones (Actriz / Modelo / Silver Presence / Contacto).
+  \item La capa SEO/GEO se implementa \emph{dentro} de esa arquitectura, no encima como parche.
+  \item El criterio editorial respeta el tono de Sophie: preciso, elegante, memorable.
+  \item Medimos, corregimos y volvemos a medir --- sin humo.
+\end{itemize}
+
+\vspace{0.4em}
+Eso no se improvisa. Se diseña.
+
+% ===================== CIERRE =====================
+\section{Cierre: el objetivo en una frase}
+
+\textbf{Que cuando alguien --- o una IA --- busque un perfil como el de Sophie Gomez,
+la respuesta correcta sea fácil de encontrar, fácil de verificar y fácil de contactar.}
+
+\vspace{0.7em}
+SEO abre la puerta.
+GEO hace que te nombren dentro de la conversación.
+Juntos, construyen una presencia digital que no depende de la suerte del algoritmo del mes.
+
+\vspace{1.1em}
+{\color{line}\hrule height 0.6pt}
+\vspace{0.9em}
+
+\noindent
+\begin{tikzpicture}
+  \node[anchor=west] at (0,0.15) {\includegraphics[height=1.1cm]{../../public/chiikologosophie.png}};
+  \node[anchor=west, text=ink, text width=11.5cm] at (3.1,0.15) {%
+    {\sffamily\bfseries Chiiko}\\[0.25em]
+    {\sffamily\small\color{mute}
+    Estrategia, diseño y sistemas digitales con criterio.\\
+    Hacemos que las marcas correctas se encuentren --- en Google y en las conversaciones que importan.}
+  };
+\end{tikzpicture}
+
+\vspace{1.2em}
+{\sffamily\footnotesize\color{mute}
+Documento preparado para Sophie Gomez · Uso interno · Chiiko\\
+SEO + GEO para IAs conversacionales · Versión 1.0}
+
+\end{document}

@@ -1,0 +1,85 @@
+{
+  "demoReel": "",
+  "demoReelPoster": "/images/actrice/demo-reel-poster.webp",
+  "photos": [
+    {
+      "id": "a1",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/actrice/headshot-1.webp",
+      "alt": { "fr": "Portrait actrice", "es": "Retrato actriz" },
+      "credit": ""
+    },
+    {
+      "id": "a2",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/actrice/headshot-2.webp",
+      "alt": { "fr": "Portrait actrice", "es": "Retrato actriz" },
+      "credit": ""
+    },
+    {
+      "id": "a3",
+      "aspect": "aspect-video",
+      "src": "/images/actrice/still-1.webp",
+      "alt": { "fr": "Still actrice", "es": "Still actriz" },
+      "credit": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "title": { "fr": "Les Heures Brisées", "es": "Las Horas Rotas" },
+      "role": { "fr": "Long métrage / Protagoniste", "es": "Largometraje / Protagonista" },
+      "year": "2025",
+      "aspect": "aspect-video",
+      "videoUrl": ""
+    },
+    {
+      "id": "p2",
+      "title": { "fr": "Silence sur la Place", "es": "Silencio en la Plaza" },
+      "role": { "fr": "Court métrage / Protagoniste", "es": "Cortometraje / Protagonista" },
+      "year": "2024",
+      "aspect": "aspect-[3/4]",
+      "videoUrl": ""
+    },
+    {
+      "id": "p3",
+      "title": { "fr": "Théâtre UNAM", "es": "Teatro UNAM" },
+      "role": { "fr": "Pièce de théâtre / Distribution principale", "es": "Obra de teatro / Elenco principal" },
+      "year": "2023",
+      "aspect": "aspect-video",
+      "videoUrl": ""
+    },
+    {
+      "id": "p4",
+      "title": { "fr": "Lumière du Matin", "es": "Luz del Amanecer" },
+      "role": { "fr": "Série / Second rôle", "es": "Serie / Secundario" },
+      "year": "2022",
+      "aspect": "aspect-[3/4]",
+      "videoUrl": ""
+    },
+    {
+      "id": "p5",
+      "title": { "fr": "Entre les Lignes", "es": "Entre Líneas" },
+      "role": { "fr": "Série / Présentatrice", "es": "Serie / Conductora" },
+      "year": "2022",
+      "aspect": "aspect-[3/4]",
+      "videoUrl": ""
+    },
+    {
+      "id": "p6",
+      "title": { "fr": "Fragments", "es": "Fragmentos" },
+      "role": { "fr": "Long métrage / Second rôle", "es": "Largometraje / Secundario" },
+      "year": "2021",
+      "aspect": "aspect-video",
+      "videoUrl": ""
+    },
+    {
+      "id": "p7",
+      "title": { "fr": "Silence sur la Place — scène", "es": "Silencio en la Plaza — escena" },
+      "role": { "fr": "Extrait scénique", "es": "Extracto escénico" },
+      "year": "2024",
+      "aspect": "aspect-video",
+      "videoUrl": ""
+    }
+  ]
+}

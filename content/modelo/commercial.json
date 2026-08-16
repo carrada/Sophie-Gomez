@@ -1,0 +1,46 @@
+{
+  "photos": [
+    {
+      "id": "c1",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/commercial/c1.webp",
+      "alt": { "fr": "Commercial — campagne 1", "es": "Comercial — campaña 1" },
+      "credit": ""
+    },
+    {
+      "id": "c2",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/commercial/c2.webp",
+      "alt": { "fr": "Commercial — campagne 2", "es": "Comercial — campaña 2" },
+      "credit": ""
+    },
+    {
+      "id": "c3",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/commercial/c3.webp",
+      "alt": { "fr": "Commercial — campagne 3", "es": "Comercial — campaña 3" },
+      "credit": ""
+    },
+    {
+      "id": "c4",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/commercial/c4.webp",
+      "alt": { "fr": "Commercial — campagne 4", "es": "Comercial — campaña 4" },
+      "credit": ""
+    },
+    {
+      "id": "c5",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/commercial/c5.webp",
+      "alt": { "fr": "Commercial — campagne 5", "es": "Comercial — campaña 5" },
+      "credit": ""
+    },
+    {
+      "id": "c6",
+      "aspect": "aspect-[3/4]",
+      "src": "/images/modelo/commercial/c6.webp",
+      "alt": { "fr": "Commercial — campagne 6", "es": "Comercial — campaña 6" },
+      "credit": ""
+    }
+  ]
+}

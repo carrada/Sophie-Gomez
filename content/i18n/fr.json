@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "name": "Sophie Gaëlle Gomez",
+    "menu": "[ Menu ]",
+    "closeMenu": "[ Fermer ]"
+  },
+  "menu": {
+    "home": "Accueil",
+    "actrice": "Actrice",
+    "modelo": "Modèle",
+    "silverPresence": "Silver Présence",
+    "contacto": "Contact"
+  },
+  "landing": {
+    "keywords": "Actrice · Modèle · Silver Présence",
+    "keywordsSecondary": "Silver Présence",
+    "heroLine": "Scène, image et voix — entre Mexico et l'Europe.",
+    "introTitle": "Trajectoire",
+    "bio": "Sophie Gomez construit une trajectoire entre la scène, le cinéma et l'image. Comme un lancement : précision, silence, impact. Entre Mexico et l'Europe, elle habite chaque cadre — actrice, modèle, voix.",
+    "photoPlaceholder": "Image hero",
+    "ctaActrice": "Book actrice",
+    "ctaModelo": "Book modèle",
+    "silverPresenceLink": "Silver Présence",
+    "pathActrice": "Scène & cinéma",
+    "pathModelo": "Éditorial & campagnes",
+    "pathSilver": "Voix & récit",
+    "pathContact": "Travailler ensemble",
+    "pathLabel": "Destination"
+  },
+  "actrice": {
+    "title": "Actrice",
+    "bio": "Formée en scène classique et contemporaine, Sophie construit une trajectoire entre le cinéma d'auteur, le théâtre de chambre et la narration audiovisuelle indépendante. Elle recherche des rôles où le silence, le corps et la présence comptent autant que la parole.",
+    "demoReelTitle": "Demo reel",
+    "photosTitle": "Photos",
+    "projectsTitle": "Projets",
+    "profileTitle": "Profil",
+    "profileHeight": "Taille",
+    "profileLanguages": "Langues",
+    "profileTraining": "Formation",
+    "profileBases": "Bases",
+    "agencyLabel": "Représentation Mexique",
+    "instagram": "Instagram",
+    "imdb": "IMDB",
+    "contact": "Contact",
+    "contactEmail": "info@talentboutique.com"
+  },
+  "modelo": {
+    "title": "Modèle",
+    "bio": "Image versatile entre éditorial et commercial : Sophie travaille la lumière, la ligne et la posture comme un langage visuel. Chaque série explore un registre — mode, beauté, campagne — avec la même exigence esthétique.",
+    "editorialTitle": "Éditorial",
+    "commercialTitle": "Commercial",
+    "bookingsTitle": "Bookings",
+    "bookingsCta": "Réserver une campagne ou un shooting",
+    "instagram": "Instagram",
+    "contact": "Contact",
+    "contactEmail": "contact@sophiegomez.me"
+  },
+  "silverPresence": {
+    "title": "Silver Présence",
+    "bio": "Silver Présence est le projet de communication de Sophie : un espace dédié à la voix, à la présence et au récit. À travers des vidéos et des contenus éditoriaux, elle explore la manière dont l'image et la parole se construisent.",
+    "videoTitle": "Vidéo",
+    "instagram": "Instagram",
+    "youtube": "YouTube"
+  },
+  "pressKit": {
+    "title": "Press kit",
+    "bio": "Ressources presse : biographie, photos haute définition et crédits pour médias et casting.",
+    "download": "Télécharger le PDF",
+    "photosTitle": "Photos presse"
+  },
+  "contacto": {
+    "title": "Contact",
+    "headline": "Travaillons ensemble",
+    "actingMexico": "Acting — Mexique",
+    "actingMexicoAgency": "Talent Boutique",
+    "direct": "Sophie Gaëlle Gomez",
+    "instagram": "Instagram",
+    "imdb": "IMDB",
+    "modeling": "Modeling",
+    "copyright": "Tous droits réservés."
+  },
+  "footer": {
+    "tagline": "Actrice · Modèle",
+    "contact": "Contact",
+    "copyright": "Tous droits réservés.",
+    "socials": "Réseaux",
+    "secondary": "Plus"
+  },
+  "common": {
+    "videoPlaceholder": "Vidéo",
+    "photoPlaceholder": "Photo",
+    "loading": "Chargement",
+    "skipToContent": "Aller au contenu",
+    "watchReel": "Voir le reel"
+  },
+  "meta": {
+    "title": "Sophie Gomez — Actrice & Modèle",
+    "description": "Portfolio de Sophie Gomez : demo reel, book actrice et modèle. Mexico · Europe. FR / ES."
+  }
+}
