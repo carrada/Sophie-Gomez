@@ -10,14 +10,14 @@ const config = {
     extend: {
       colors: {
         brand: {
-          ink: "#1C1917",
-          mute: "#78716C",
-          soft: "#A8A29E",
-          line: "#D6D3D1",
-          lineStrong: "#44403C",
-          paper: "#FAFAF9",
-          subtitle: "#4A4A4A",
-          graphite: "#0C0A09",
+          ink: "var(--brand-ink)",
+          mute: "var(--brand-mute)",
+          soft: "var(--brand-soft)",
+          line: "var(--brand-line)",
+          lineStrong: "var(--brand-line-strong)",
+          paper: "var(--brand-paper)",
+          subtitle: "var(--brand-subtitle)",
+          graphite: "var(--brand-graphite)",
         },
       },
       fontFamily: {

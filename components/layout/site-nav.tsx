@@ -36,9 +36,10 @@ export function SiteNav() {
             {!isHome ? (
               <Link
                 href="/"
-                className="font-display text-base tracking-wide text-brand-ink transition-opacity hover:opacity-60 md:text-lg"
+                aria-label={dictionary.nav.name}
+                className="font-display text-base tracking-[0.12em] text-brand-ink transition-opacity hover:opacity-60 md:text-lg"
               >
-                {dictionary.nav.name}
+                SGG
               </Link>
             ) : null}
           </div>

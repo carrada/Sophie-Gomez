@@ -9,9 +9,9 @@ import {
   type StaggeredMenuHandle,
   type StaggeredMenuItem,
 } from "@/components/ui/staggered-menu";
-import { filterSocialLinks } from "@/lib/social-links";
 import { getNavLabel } from "@/lib/nav-labels";
 import { primaryNavRoutes } from "@/lib/navigation";
+import { getPaletteForPath, sitePalette } from "@/lib/palettes";
 
 function stripBrackets(value: string) {
   return value.replace(/^\[\s*|\s*\]$/g, "").trim();
@@ -46,11 +46,15 @@ export function SiteStaggeredMenu({ onOpenChange }: SiteStaggeredMenuProps) {
     });
   }, [dictionary, pathname]);
 
-  const socialItems = filterSocialLinks([
+  const socialItems = [
     { label: "Instagram", link: contactData.instagram.actrice },
     { label: "IMDB", link: contactData.imdb },
     { label: "YouTube", link: contactData.youtube },
-  ]);
+  ].filter(
+    (item) => item.label === "YouTube" || Boolean(item.link?.trim()),
+  );
+
+  const palette = getPaletteForPath(pathname) ?? sitePalette;
 
   return (
     <StaggeredMenu
@@ -62,14 +66,14 @@ export function SiteStaggeredMenu({ onOpenChange }: SiteStaggeredMenuProps) {
       items={items}
       socialItems={socialItems}
       displaySocials={socialItems.length > 0}
-      displayItemNumbering
+      displayItemNumbering={false}
       menuText={stripBrackets(dictionary.nav.menu)}
       closeText={stripBrackets(dictionary.nav.closeMenu)}
       socialsTitle={dictionary.footer.socials}
-      colors={["#D6D3D1", "#A8A29E", "#78716C"]}
-      menuButtonColor="#1C1917"
-      openMenuButtonColor="#1C1917"
-      accentColor="#1C1917"
+      colors={[palette.line, palette.soft, palette.mute]}
+      menuButtonColor={palette.ink}
+      openMenuButtonColor={palette.ink}
+      accentColor={palette.ink}
       changeMenuColorOnOpen={false}
       closeOnClickAway
       onOpenChange={(open) => {

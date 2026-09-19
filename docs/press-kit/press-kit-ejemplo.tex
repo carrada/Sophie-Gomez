@@ -1,0 +1,410 @@
+% !TEX program = xelatex
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{array}
+
+% —— Stone Soft ——
+\definecolor{ink}{HTML}{1C1917}
+\definecolor{mute}{HTML}{78716C}
+\definecolor{soft}{HTML}{A8A29E}
+\definecolor{line}{HTML}{D6D3D1}
+\definecolor{paper}{HTML}{FAFAF9}
+\definecolor{subtitle}{HTML}{4A4A4A}
+\definecolor{graphite}{HTML}{0C0A09}
+\definecolor{wash}{HTML}{F5F5F4}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Montserrat}[
+  UprightFont = * ,
+  BoldFont = * Medium ,
+  LetterSpace = 2.0
+]
+\newfontfamily\fDisplay{TeX Gyre Pagella}
+\newfontfamily\fSans{Montserrat}
+\newfontfamily\fSansMed{Montserrat Medium}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=ink,
+  urlcolor=mute,
+  pdfauthor={Chiiko · Sophie Gaëlle Gomez},
+  pdftitle={Press Kit — Sophie Gaëlle Gomez (ejemplo Stone Soft)},
+  pdfsubject={Ejemplo de organización de press kit}
+}
+
+\pagecolor{paper}
+\color{ink}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{line}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[L]{\footnotesize\color{mute}\fSans Ejemplo · Press kit · Stone Soft}
+\fancyfoot[R]{\footnotesize\color{mute}\thepage}
+
+\titleformat{\section}
+  {\fDisplay\color{ink}\LARGE}
+  {}{0em}{}
+  [\vspace{0.15em}{\color{line}\titlerule[0.6pt]}]
+\titleformat{\subsection}
+  {\fSansMed\color{subtitle}\footnotesize}
+  {}{0em}{\MakeUppercase}
+
+\newcommand{\hint}[1]{%
+  \par\vspace{0.35em}%
+  \noindent{\footnotesize\color{mute}\fSans\textit{→ Qué irá aquí:}~#1}\par%
+  \vspace{0.5em}%
+}
+
+\newcommand{\sectionlabel}[1]{%
+  {\fSansMed\color{soft}\footnotesize\MakeUppercase{#1}}\par\vspace{0.4em}%
+}
+
+\newcommand{\photobox}[1]{%
+  \begin{tikzpicture}
+    \fill[wash] (0,0) rectangle (7.2,4.6);
+    \draw[line, line width=0.6pt] (0,0) rectangle (7.2,4.6);
+    \node[align=center, text=mute, font=\fSans\footnotesize] at (3.6,2.3) {#1};
+  \end{tikzpicture}%
+}
+
+\newcommand{\swatch}[2]{%
+  \begin{tikzpicture}[baseline=(s.base)]
+    \fill[#1] (0,0) rectangle (0.85,0.85);
+    \draw[line, line width=0.4pt] (0,0) rectangle (0.85,0.85);
+    \node[anchor=west, font=\fSans\tiny\color{mute}, inner sep=0] (s) at (1.0,0.42) {#2};
+  \end{tikzpicture}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+% ===================== COVER =====================
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[paper] (current page.south west) rectangle (current page.north east);
+  \fill[wash] ([yshift=-0cm]current page.north west) rectangle ([yshift=-4.2cm]current page.north east);
+  \draw[line, line width=0.6pt]
+    ([yshift=-4.2cm]current page.north west) -- ([yshift=-4.2cm]current page.north east);
+\end{tikzpicture}
+
+\vspace*{1.6cm}
+{\fSansMed\color{soft}\footnotesize\MakeUppercase{Press kit · Ejemplo de organización}}
+
+\vspace{1.1cm}
+{\fDisplay\color{graphite}\fontsize{36}{40}\selectfont Sophie Gaëlle Gomez}
+
+\vspace{0.55cm}
+{\fSansMed\color{subtitle}\normalsize\MakeUppercase{Actrice · Modèle · Silver Presence}}
+
+\vspace{0.9cm}
+{\color{line}\rule{\textwidth}{0.6pt}}
+
+\vspace{0.75cm}
+\begin{minipage}[t]{0.55\textwidth}
+  {\fSans\color{mute}\small
+  Documento de muestra para definir la estructura del press kit digital y PDF.\\[0.4em]
+  Paleta: \textbf{\color{ink}Stone Soft}\\
+  Hex: \#1C1917 · \#78716C · \#A8A29E · \#FAFAF9
+  }
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.38\textwidth}
+  \raggedleft
+  {\fSans\color{mute}\footnotesize
+  México · Europe\\
+  sophiegomez.me\\[0.6em]
+  \textbf{\color{ink}Versión ejemplo}\\
+  textos guía + placeholders
+  }
+\end{minipage}
+
+\vspace{1.6cm}
+\sectionlabel{Paleta Stone Soft}
+\vspace{0.3em}
+\swatch{ink}{Ink \#1C1917}\hspace{0.8em}
+\swatch{mute}{Mute \#78716C}\hspace{0.8em}
+\swatch{soft}{Soft \#A8A29E}\hspace{0.8em}
+\swatch{line}{Line \#D6D3D1}\hspace{0.8em}
+\swatch{paper}{Paper \#FAFAF9}
+
+\vspace{2.2cm}
+{\fSans\color{mute}\footnotesize
+Este PDF muestra \textbf{\color{ink}qué secciones} debe tener el press kit y, bajo cada bloque,
+\textbf{\color{ink}qué contenido real} sustituirá a los textos de ejemplo.
+}
+
+\vfill
+{\fSans\color{soft}\footnotesize Chiiko · Propuesta de organización · No indexar}
+
+\newpage
+
+% ===================== ORGANIZACIÓN =====================
+\section*{Cómo está organizado}
+
+\hint{Una página de índice interno para periodistas, casting y prensa. En la versión final puede omitirse o reducirse a un solo párrafo.}
+
+\vspace{0.4em}
+{\fSansMed\color{subtitle}\footnotesize\MakeUppercase{Mapa del press kit}}
+
+\vspace{0.6em}
+\renewcommand{\arraystretch}{1.45}
+\begin{tabularx}{\textwidth}{@{} >{\fSans\footnotesize\bfseries\color{ink}}p{3.2cm} >{\small\color{ink}}X @{}}
+\hline
+\color{line}\rule{0pt}{2.4em}Portada & Nombre, roles, ciudad/base, sitio web y sello visual Stone Soft.\\
+Ficha rápida & Datos esenciales en 8--12 líneas (idiomas, bases, estatura, contactos).\\
+Bio corta & 80--120 palabras para notas de prensa y pie de foto.\\
+Bio larga & 180--280 palabras para dossiers, festivales y medios.\\
+Perfil técnico & Medidas / estatura / idiomas / formación (actriz + modelo).\\
+Créditos & Filmografía y trabajos selectos (cine, TV, teatro, campaña).\\
+Formación & Escuelas, coaches, workshops relevantes.\\
+Silver Presence & 1 párrafo sobre el proyecto de voz / comunicación.\\
+Fotos & Guía de headshots / stills en HD + créditos de fotógrafo.\\
+Contacto & Agencia, email directo, Instagram, IMDb, web.\\
+\hline
+\end{tabularx}
+
+\vspace{1.2em}
+{\fSans\color{mute}\footnotesize
+Orden recomendado para PDF descargable (4--8 páginas). En web, las mismas secciones pueden vivir como bloques en \texttt{/press-kit}.
+}
+
+\newpage
+
+% ===================== FICHA RÁPIDA =====================
+\section*{Ficha rápida}
+
+\hint{Tarjeta de identidad profesional. Actualizar cuando cambien representación, bases o medidas.}
+
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{@{} >{\fSans\footnotesize\color{mute}}p{3.4cm} >{\small\color{ink}}X @{}}
+Nombre & Sophie Gaëlle Gomez\\
+Roles & Actriz · Modelo · Silver Presence\\
+Bases & Ciudad de México · Europa (ciudades a confirmar)\\
+Idiomas & Francés · Español · Inglés (nivel real a confirmar)\\
+Estatura & [ej.\ 1,XX m] --- \textit{\color{mute}dato oficial de Sophie}\\
+Agencia (MX) & Talent Boutique --- \textit{\color{mute}o la representación vigente}\\
+Email & contact@sophiegomez.me --- \textit{\color{mute}email de bookings / prensa}\\
+Web & \url{https://sophiegomez.me}\\
+IMDb & \url{https://www.imdb.com/es/name/nm1960841/}\\
+Instagram & @sophiegaelleof --- \textit{\color{mute}handle oficial}\\
+\end{tabularx}
+
+\newpage
+
+% ===================== BIO CORTA =====================
+\section*{Biografía corta}
+
+\hint{Versión de 80--120 palabras. Sirve para press release, programas de mano, pies de foto y emails a casting. Tono sobrio, en tercera persona.}
+
+\vspace{0.35em}
+\sectionlabel{Texto de ejemplo (sustituir)}
+
+{\large\color{ink}
+Sophie Gaëlle Gomez es actriz y modelo entre México y Europa. Formada en escena clásica y contemporánea, construye una presencia sobria —silencio, cuerpo, precisión— en cine de autor, teatro de cámara e imagen editorial. Con \emph{Silver Presence}, desarrolla también un espacio de voz y relato. Trabaja en francés, español e inglés.
+}
+
+\vspace{0.9em}
+{\fSans\color{mute}\footnotesize
+\textbf{\color{ink}Checklist del texto final:} ciudad(es) base · 1--2 géneros que la definen · idiomas · mención breve de Silver Presence (opcional) · sin jerga promocional.
+}
+
+\newpage
+
+% ===================== BIO LARGA =====================
+\section*{Biografía larga}
+
+\hint{Versión dossier (180--280 palabras). Para festivales, prensa cultural, partners y press kit completo. Puede existir en FR / ES / EN.}
+
+\vspace{0.35em}
+\sectionlabel{Texto de ejemplo (sustituir)}
+
+{\color{ink}
+Sophie Gaëlle Gomez construye una trayectoria entre la escena, el cine y la imagen. Como un lanzamiento: precisión, silencio, impacto. Entre México y Europa, habita cada cuadro —actriz, modelo, voz.
+
+Formada en trabajo escénico clásico y contemporáneo, busca roles donde el cuerpo y la presencia importan tanto como la palabra. En imagen, trata la luz, la línea y la postura como lenguaje visual: editorial, belleza y campaña, con la misma exigencia estética.
+
+\emph{Silver Presence} es su proyecto de comunicación: un espacio dedicado a la voz, la presencia y el relato, donde explora cómo se construyen la imagen y la palabra.
+
+\textit{\color{mute}[Aquí añadir 2--4 créditos reales destacados en una frase, p.\ ej.\ «Recientemente participó en\ldots» o «Ha colaborado con\ldots».]}
+}
+
+\vspace{0.8em}
+{\fSans\color{mute}\footnotesize
+\textbf{\color{ink}Qué completar con Sophie:} formación concreta · créditos verificables · tono (más cine / más fashion) · versión en francés e inglés.
+}
+
+\newpage
+
+% ===================== PERFIL TÉCNICO =====================
+\section*{Perfil técnico}
+
+\hint{Bloque útil para casting y bookings. Separar actriz y modelo si las medidas o usos son distintos.}
+
+\vspace{0.4em}
+\subsection*{Actriz}
+\begin{tabularx}{\textwidth}{@{} >{\fSans\footnotesize\color{mute}}p{3.4cm} >{\small\color{ink}}X @{}}
+Estatura & [1,XX m]\\
+Tipo de rol & [dramático / contemporáneo / autor --- a definir]\\
+Idiomas de juego & Francés · Español · Inglés\\
+Bases & México · Europa\\
+Demo reel & Enlace o QR al reel en \texttt{/actrice}\\
+\end{tabularx}
+
+\vspace{0.8em}
+\subsection*{Modelo}
+\begin{tabularx}{\textwidth}{@{} >{\fSans\footnotesize\color{mute}}p{3.4cm} >{\small\color{ink}}X @{}}
+Estatura & [dato oficial]\\
+Medidas & [busto / cintura / cadera --- solo si Sophie autoriza]\\
+Cabello / ojos & [color real]\\
+Book & Editorial · Comercial (enlaces al sitio)\\
+\end{tabularx}
+
+\vspace{0.9em}
+{\fSans\color{mute}\footnotesize
+\textbf{\color{ink}Importante:} no inventar medidas. Dejar celdas vacías hasta confirmación. El PDF final solo publica lo autorizado.
+}
+
+\newpage
+
+% ===================== CRÉDITOS =====================
+\section*{Créditos selectos}
+
+\hint{Lista curada (no exhaustiva). Formato: Título — Rol — Director / Medio — Año. Priorizar calidad y verificabilidad (IMDb).}
+
+\vspace{0.35em}
+\sectionlabel{Ejemplo de formato}
+
+\begin{itemize}[leftmargin=1.1em, itemsep=0.45em]
+  \item {\color{ink}\textbf{Título del proyecto} — Rol (ej.\ «Ana») — Dir.\ Nombre Apellido — Cine / 20XX}\\
+  {\footnotesize\color{mute}\textit{→ Sustituir por crédito real; 1 línea por obra.}}
+  \item {\color{ink}\textbf{Obra de teatro} — Personaje — Compañía / Sala — 20XX}\\
+  {\footnotesize\color{mute}\textit{→ Incluir solo montajes que Sophie quiera mostrar.}}
+  \item {\color{ink}\textbf{Campaña / editorial} — Marca o revista — Fotógrafo — 20XX}\\
+  {\footnotesize\color{mute}\textit{→ Para el book modelo: 4--8 trabajos representativos.}}
+\end{itemize}
+
+\vspace{0.7em}
+{\fSans\color{mute}\footnotesize
+Recomendación: máximo 8--12 créditos en el PDF. El resto vive en IMDb y en el sitio.
+}
+
+\newpage
+
+% ===================== FORMACIÓN =====================
+\section*{Formación}
+
+\hint{Escuelas, estudios, coaches y workshops con nombre real. Evitar listas interminables: 4--8 entradas fuertes.}
+
+\begin{itemize}[leftmargin=1.1em, itemsep=0.45em]
+  \item {\color{ink}\textbf{[Escuela / estudio]} — Ciudad — años o programa}\\
+  {\footnotesize\color{mute}\textit{→ Ej.\ formación teatral, cine, voz.}}
+  \item {\color{ink}\textbf{[Coach / workshop]} — Especialidad — año}\\
+  {\footnotesize\color{mute}\textit{→ Solo si aporta credibilidad internacional o técnica.}}
+\end{itemize}
+
+\newpage
+
+% ===================== SILVER PRESENCE =====================
+\section*{Silver Presence}
+
+\hint{Un párrafo corto para medios y partners. No hace falta dossier aparte salvo que el proyecto crezca.}
+
+\vspace{0.35em}
+\sectionlabel{Texto de ejemplo (sustituir)}
+
+{\color{ink}
+Silver Presence es el proyecto de comunicación de Sophie Gaëlle Gomez: un espacio dedicado a la voz, la presencia y el relato. A través de video y contenido editorial, explora cómo se construyen la imagen y la palabra entre México y Europa.
+}
+
+\vspace{0.6em}
+{\fSans\color{mute}\footnotesize
+\textbf{\color{ink}Añadir en final:} enlace a \texttt{/silver-presence}, Instagram del proyecto (si existe), 1 frase de posicionamiento.
+}
+
+\newpage
+
+% ===================== FOTOS =====================
+\section*{Fotos de prensa}
+
+\hint{En el PDF final: 4--6 fotos HD con crédito. Aquí solo se muestra la organización visual (placeholders).}
+
+\vspace{0.5em}
+\begin{minipage}[t]{0.48\textwidth}
+  \photobox{Headshot 1\\[0.3em]Retrato frontal · luz natural\\[0.2em]{\tiny Crédito fotógrafo}}
+  \vspace{0.35em}
+  {\fSans\tiny\color{mute}→ Headshot principal para casting / prensa}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \photobox{Headshot 2\\[0.3em]3/4 o perfil · variación\\[0.2em]{\tiny Crédito fotógrafo}}
+  \vspace{0.35em}
+  {\fSans\tiny\color{mute}→ Variante de expresión / look}
+\end{minipage}
+
+\vspace{1.0em}
+\begin{minipage}[t]{0.48\textwidth}
+  \photobox{Still / escena\\[0.3em]Frame de proyecto\\[0.2em]{\tiny Autorización de uso}}
+  \vspace{0.35em}
+  {\fSans\tiny\color{mute}→ Still con derechos despejados}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \photobox{Editorial\\[0.3em]Look book / campaña\\[0.2em]{\tiny Crédito + marca}}
+  \vspace{0.35em}
+  {\fSans\tiny\color{mute}→ Imagen modelo (si aplica)}
+\end{minipage}
+
+\vspace{1.1em}
+{\fSans\color{mute}\footnotesize
+\textbf{\color{ink}Normas:} JPG/PNG alta resolución · espacio de color sRGB · incluir crédito · indicar si el uso es solo prensa o también comercial.
+}
+
+\newpage
+
+% ===================== CONTACTO =====================
+\section*{Contacto}
+
+\hint{Cerrar el PDF con una sola página de contacto clara. Evitar demasiados emails.}
+
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{@{} >{\fSans\footnotesize\color{mute}}p{3.6cm} >{\small\color{ink}}X @{}}
+Prensa / general & contact@sophiegomez.me\\
+Acting — México & Talent Boutique · info@talentboutique.com\\
+Instagram & \url{https://www.instagram.com/sophiegaelleof/}\\
+IMDb & \url{https://www.imdb.com/es/name/nm1960841/}\\
+Sitio & \url{https://sophiegomez.me}\\
+Press kit web & \url{https://sophiegomez.me/press-kit}\\
+\end{tabularx}
+
+\vspace{1.4em}
+{\color{line}\rule{\textwidth}{0.6pt}}
+
+\vspace{0.9em}
+{\fSansMed\color{soft}\footnotesize\MakeUppercase{Próximo paso con Sophie}}
+
+\vspace{0.45em}
+{\small\color{ink}
+Reemplazar todos los bloques marcados con \textit{\color{mute}→ Qué irá aquí} por datos reales, elegir 4--6 fotos autorizadas, cerrar bio corta + larga en FR/ES/EN, y exportar la versión definitiva del PDF para \texttt{public/press-kit.pdf}.
+}
+
+\vspace{1.6em}
+{\fSans\color{mute}\footnotesize
+Documento de ejemplo · Paleta Stone Soft · Chiiko\\
+No es el press kit final — es la plantilla de organización.
+}
+
+\end{document}

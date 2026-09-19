@@ -64,27 +64,42 @@ function HeroBrandOverlay() {
           <p className={`mt-3 ${brandSubtitle} md:mt-4`}>
             {dictionary.landing.keywords}
           </p>
-          <p className={`mt-3 max-w-xl ${bodyText} md:mt-4`}>
-            {dictionary.landing.heroLine}
-          </p>
         </div>
       </div>
     </motion.div>
   );
 }
 
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktop(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  return isDesktop;
+}
+
 function CenterImage({ centerSrc }: { centerSrc: string }) {
   const { scrollY } = useScroll();
   const { dictionary } = useLanguage();
+  const isDesktop = useIsDesktop();
 
   const clip1 = useTransform(scrollY, [0, 1500], [25, 0]);
   const clip2 = useTransform(scrollY, [0, 1500], [75, 100]);
   const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`;
 
+  // Desktop: llenar por altura (sin zoom agresivo) para ver el retrato completo
+  const startSize = isDesktop ? "auto 105%" : "145%";
+  const endSize = isDesktop ? "auto 100%" : "100%";
   const backgroundSize = useTransform(
     scrollY,
     [0, SECTION_HEIGHT + 500],
-    ["170%", "100%"],
+    [startSize, endSize],
   );
   const opacity = useTransform(
     scrollY,
@@ -100,7 +115,7 @@ function CenterImage({ centerSrc }: { centerSrc: string }) {
         backgroundSize,
         opacity,
         backgroundImage: `url(${centerSrc})`,
-        backgroundPosition: "center",
+        backgroundPosition: isDesktop ? "center 18%" : "center",
         backgroundRepeat: "no-repeat",
       }}
       role="img"
@@ -129,8 +144,8 @@ function ParallaxImg({
     offset: [`${start}px end`, `end ${end * -1}px`],
   });
 
-  const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.85]);
+  const opacity = useTransform(scrollYProgress, [0.55, 1], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0.55, 1], [1, 0.92]);
   const y = useTransform(scrollYProgress, [0, 1], [start, end]);
   const transform = useMotionTemplate`translateY(${y}px) scale(${scale})`;
 
@@ -139,7 +154,13 @@ function ParallaxImg({
     <motion.img
       src={src}
       alt={alt}
-      className={className}
+      className={[
+        "relative mb-12 block object-cover",
+        "max-h-[46vh] md:mb-16 md:max-h-[40vh] lg:max-h-[36vh]",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
       ref={ref}
       style={{ transform, opacity }}
     />
@@ -150,7 +171,7 @@ function ParallaxImages({ items }: { items: ParallaxItem[] }) {
   const { locale } = useLanguage();
 
   return (
-    <div className="relative z-10 mx-auto max-w-5xl px-4 pt-[200px]">
+    <div className="relative z-10 mx-auto max-w-5xl px-4 pb-28 pt-[180px] md:pb-40 md:pt-[220px]">
       {items.map((item) => (
         <ParallaxImg
           key={item.src}
@@ -210,7 +231,7 @@ function IntroSection() {
   return (
     <section
       id="intro"
-      className={`${contentContainer} ${pagePadding} ${sectionBottomPadding} relative z-10 bg-brand-paper pt-24 text-brand-ink md:pt-36`}
+      className={`${contentContainer} ${pagePadding} ${sectionBottomPadding} relative z-20 bg-brand-paper pt-24 text-brand-ink md:pt-36`}
     >
       <motion.h2
         initial={{ y: 48, opacity: 0 }}
@@ -266,7 +287,7 @@ function StaticHero({ centerSrc }: { centerSrc: string }) {
   return (
     <section className="relative h-[100dvh] min-h-[100svh] w-full overflow-hidden bg-brand-paper">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-no-repeat bg-[length:auto_100%] bg-[center_18%] max-lg:bg-cover max-lg:bg-center"
         style={{ backgroundImage: `url(${centerSrc})` }}
         role="img"
         aria-label={dictionary.landing.photoPlaceholder}
@@ -284,9 +305,6 @@ function StaticHero({ centerSrc }: { centerSrc: string }) {
           </h1>
           <p className={`mt-3 ${brandSubtitle} md:mt-4`}>
             {dictionary.landing.keywords}
-          </p>
-          <p className={`mt-3 max-w-xl ${bodyText} md:mt-4`}>
-            {dictionary.landing.heroLine}
           </p>
         </div>
       </div>

@@ -77,7 +77,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #1c1917;
+  color: var(--brand-ink);
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.02em;
@@ -93,7 +93,7 @@
 }
 
 .sm-toggle:focus-visible {
-  outline: 1px solid #737373;
+  outline: 1px solid var(--brand-mute);
   outline-offset: 4px;
 }
 
@@ -152,13 +152,13 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: clamp(320px, 48vw, 560px);
+  width: clamp(320px, 52vw, 600px);
   height: 100%;
-  background: #fafaf9;
-  border-left: 1px solid #d6d3d1;
+  background: var(--brand-paper);
+  border-left: 1px solid var(--brand-line);
   display: flex;
   flex-direction: column;
-  padding: calc(var(--nav-height, 3.5rem) + 2rem) 2em 2em;
+  padding: calc(var(--nav-height, 3.5rem) + 2.75rem) 2.25em 2.75em;
   overflow-y: auto;
   z-index: 70;
   pointer-events: auto;
@@ -169,7 +169,7 @@
   right: auto;
   left: 0;
   border-left: none;
-  border-right: 1px solid #262626;
+  border-right: 1px solid var(--brand-line-strong);
 }
 
 .sm-prelayers {
@@ -202,15 +202,16 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 2.5rem;
+  justify-content: center;
 }
 
 .sm-socials {
   margin-top: auto;
-  padding-top: 2rem;
+  padding-top: 2.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .sm-socials-title {
@@ -220,7 +221,7 @@
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #78716c;
+  color: var(--brand-mute);
 }
 
 .sm-socials-list {
@@ -247,7 +248,7 @@
 }
 
 .sm-socials-link:focus-visible {
-  outline: 1px solid var(--sm-accent, #fafafa);
+  outline: 1px solid var(--sm-accent, var(--brand-paper));
   outline-offset: 3px;
 }
 
@@ -263,7 +264,7 @@
   font-family: var(--font-montserrat), sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #78716c;
+  color: var(--brand-mute);
   text-decoration: none;
   position: relative;
   padding: 2px 0;
@@ -274,7 +275,7 @@
 }
 
 .sm-socials-link:hover {
-  color: var(--sm-accent, #1c1917);
+  color: var(--sm-accent, var(--brand-ink));
 }
 
 .sm-panel-list {
@@ -283,26 +284,32 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 1.75rem;
+}
+
+.sm-panel-itemWrap {
+  display: block;
 }
 
 .sm-panel-item {
   position: relative;
-  color: #1c1917;
+  color: var(--brand-ink);
   font-family: var(--font-marcellus), serif;
   font-weight: 400;
-  font-size: clamp(2.75rem, 7vw, 3.5rem);
+  font-size: clamp(1.55rem, 4vw, 2rem);
   cursor: pointer;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   text-transform: none;
+  white-space: nowrap;
   transition:
     background 0.25s,
     color 0.25s,
     opacity 0.25s;
   display: inline-block;
   text-decoration: none;
-  padding-right: 1.4em;
+  padding-right: 0.5em;
+  max-width: 100%;
 }
 
 .staggered-menu-panel .sm-socials-list .sm-socials-link {
@@ -331,12 +338,12 @@
 
 .sm-panel-item:hover,
 .sm-panel-item:focus-visible {
-  color: var(--sm-accent, #1c1917);
+  color: var(--sm-accent, var(--brand-ink));
   opacity: 0.55;
 }
 
 .sm-panel-item[data-active='true'] {
-  color: #a8a29e;
+  color: var(--brand-soft);
 }
 
 .sm-panel-list[data-numbering] {
@@ -347,12 +354,12 @@
   counter-increment: smItem;
   content: counter(smItem, decimal-leading-zero);
   position: absolute;
-  top: 0.35em;
-  right: 2.8em;
-  font-size: 0.75rem;
+  top: 0.4em;
+  right: 0.15em;
+  font-size: 0.7rem;
   font-weight: 500;
   font-family: var(--font-montserrat), sans-serif;
-  color: #a8a29e;
+  color: var(--brand-soft);
   letter-spacing: 0.08em;
   pointer-events: none;
   user-select: none;
@@ -361,11 +368,11 @@
 
 @media (min-width: 1025px) {
   .sm-panel-item {
-    font-size: clamp(2.75rem, 4.5vw, 4.25rem);
+    font-size: clamp(1.65rem, 2.4vw, 2.15rem);
   }
 
   .sm-panel-list {
-    gap: 0.5rem;
+    gap: 2rem;
   }
 }
 
@@ -378,12 +385,17 @@
   }
 
   .sm-panel-item {
-    font-size: clamp(3.5rem, 13vw, 5.25rem);
+    font-size: clamp(1.7rem, 5.5vw, 2.25rem);
+  }
+
+  .sm-panel-list {
+    gap: 1.85rem;
   }
 
   .sm-panel-list[data-numbering] .sm-panel-item::after {
-    font-size: 1rem;
-    right: 2.4em;
+    font-size: 0.8rem;
+    right: 1.6em;
+    top: 0.45em;
   }
 }
 
@@ -395,12 +407,16 @@
     right: 0;
   }
 
+  .staggered-menu-panel {
+    padding: calc(var(--nav-height, 3.5rem) + 2.25rem) 1.5em 2.25em;
+  }
+
   .sm-panel-item {
-    font-size: clamp(3.75rem, 15vw, 5.75rem);
+    font-size: clamp(1.55rem, 6.5vw, 2rem);
   }
 
   .sm-panel-list {
-    gap: 0.65rem;
+    gap: 1.9rem;
   }
 }
 

@@ -24,7 +24,7 @@ export type StaggeredMenuItem = {
 
 export type StaggeredMenuSocialItem = {
   label: string;
-  link: string;
+  link?: string;
 };
 
 type StaggeredMenuProps = {
@@ -660,18 +660,25 @@ export const StaggeredMenu = forwardRef<StaggeredMenuHandle, StaggeredMenuProps>
             <div className="sm-socials" aria-label="Social links">
               <h3 className="sm-socials-title">{socialsTitle}</h3>
               <ul className="sm-socials-list" role="list">
-                {socialItems.map((item, i) => (
-                  <li key={`${item.link}-${i}`} className="sm-socials-item">
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sm-socials-link"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
+                {socialItems.map((item, i) => {
+                  const href = item.link?.trim();
+                  return (
+                    <li key={`${item.label}-${i}`} className="sm-socials-item">
+                      {href ? (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="sm-socials-link"
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <span className="sm-socials-link">{item.label}</span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )}
