@@ -26,26 +26,15 @@
       "className": "mx-auto w-[58%] max-w-[340px] md:w-[62%] md:max-w-[620px]"
     },
     {
-      "src": "/images/hero/04-dsf6539.jpg",
-      "alt": {
-        "fr": "Sophie Gaëlle Gomez",
-        "es": "Sophie Gaëlle Gomez",
-        "en": "Sophie Gaëlle Gomez"
-      },
-      "start": -140,
-      "end": 160,
-      "className": "mx-auto w-[40%] max-w-[230px] md:mx-0 md:ml-auto md:w-[36%] md:max-w-[360px]"
-    },
-    {
       "src": "/images/hero/05-dsf6622.jpg",
       "alt": {
         "fr": "Sophie Gaëlle Gomez",
         "es": "Sophie Gaëlle Gomez",
         "en": "Sophie Gaëlle Gomez"
       },
-      "start": 80,
-      "end": -220,
-      "className": "mx-auto w-[48%] max-w-[280px] md:mx-0 md:mr-auto md:w-[50%] md:max-w-[520px]"
+      "start": -120,
+      "end": -320,
+      "className": "ml-auto w-[56%] max-w-[320px] md:w-[54%] md:max-w-[560px]"
     }
   ]
 }

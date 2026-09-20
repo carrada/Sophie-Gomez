@@ -57,7 +57,7 @@ function HeroBrandOverlay() {
         className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-brand-paper via-brand-paper/90 to-transparent"
       />
       <div className={`relative ${pagePadding} pb-10 pt-24 md:pb-14`}>
-        <div className={`${contentContainer} mx-auto w-full`}>
+        <div className={`${contentContainer} mx-auto w-full text-center`}>
           <h1 className={`${displayTitle} text-brand-ink`}>
             Sophie Gaëlle Gomez
           </h1>
@@ -104,12 +104,14 @@ function ParallaxImg({
   src,
   start,
   end,
+  linger = false,
 }: {
   className?: string;
   alt: string;
   src: string;
   start: number;
   end: number;
+  linger?: boolean;
 }) {
   const ref = useRef<HTMLImageElement>(null);
 
@@ -118,8 +120,9 @@ function ParallaxImg({
     offset: [`${start}px end`, `end ${end * -1}px`],
   });
 
-  const opacity = useTransform(scrollYProgress, [0.45, 0.9], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0.45, 0.9], [1, 0.92]);
+  const fadeRange: [number, number] = linger ? [0.62, 0.98] : [0.45, 0.9];
+  const opacity = useTransform(scrollYProgress, fadeRange, [1, 0]);
+  const scale = useTransform(scrollYProgress, fadeRange, [1, linger ? 0.96 : 0.92]);
   const y = useTransform(scrollYProgress, [0, 1], [start, end]);
   const transform = useMotionTemplate`translateY(${y}px) scale(${scale})`;
 
@@ -130,7 +133,9 @@ function ParallaxImg({
       alt={alt}
       className={[
         "relative mb-12 block object-cover last:mb-0",
-        "max-h-[46vh] md:mb-16 md:max-h-[72vh] md:last:mb-0 lg:max-h-[68vh]",
+        linger
+          ? "max-h-[52vh] md:mb-16 md:max-h-[78vh] md:last:mb-0 lg:max-h-[74vh]"
+          : "max-h-[46vh] md:mb-16 md:max-h-[72vh] md:last:mb-0 lg:max-h-[68vh]",
         className,
       ]
         .filter(Boolean)
@@ -146,7 +151,7 @@ function ParallaxImages({ items }: { items: ParallaxItem[] }) {
 
   return (
     <div className="relative z-10 mx-auto max-w-5xl px-4 pb-28 pt-[180px] md:pb-24 md:pt-[220px]">
-      {items.map((item) => (
+      {items.map((item, index) => (
         <ParallaxImg
           key={item.src}
           src={item.src}
@@ -154,6 +159,7 @@ function ParallaxImages({ items }: { items: ParallaxItem[] }) {
           start={item.start}
           end={item.end}
           className={item.className}
+          linger={index === items.length - 1}
         />
       ))}
     </div>
@@ -162,11 +168,9 @@ function ParallaxImages({ items }: { items: ParallaxItem[] }) {
 
 function PathItem({
   title,
-  detail,
   href,
 }: {
   title: string;
-  detail: string;
   href: string;
 }) {
   return (
@@ -175,17 +179,14 @@ function PathItem({
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
       viewport={{ once: true, amount: 0.35 }}
-      className="mb-9 border-b border-brand-line px-1 pb-9 last:mb-0"
+      className="mb-9 border-b border-brand-line px-1 pb-9 text-center last:mb-0"
     >
       <Link
         href={href}
         className="group block transition-opacity hover:opacity-80"
       >
-        <p className="mb-1.5 font-display text-2xl text-brand-ink md:text-3xl">
+        <p className="font-display text-2xl text-brand-ink md:text-3xl">
           {title}
-        </p>
-        <p className="font-sans text-sm font-medium uppercase tracking-brand text-brand-mute">
-          {detail}
         </p>
       </Link>
     </motion.div>
@@ -205,7 +206,7 @@ function IntroSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
         viewport={{ once: true, amount: 0.4 }}
-        className={`mb-8 ${pageTitle} md:mb-10`}
+        className={`mb-8 ${pageTitle} text-center md:mb-10`}
       >
         {dictionary.landing.introTitle}
       </motion.h2>
@@ -215,33 +216,20 @@ function IntroSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
         viewport={{ once: true, amount: 0.4 }}
-        className={`mb-16 max-w-2xl space-y-4 ${bodyText} md:mb-20`}
+        className={`mb-16 mx-auto max-w-2xl space-y-4 ${bodyText} md:mb-20`}
       >
         {dictionary.landing.bio.split("\n\n").map((paragraph) => (
           <p key={paragraph.slice(0, 48)}>{paragraph}</p>
         ))}
       </motion.div>
 
-      <PathItem
-        title={dictionary.menu.actrice}
-        detail={dictionary.landing.pathActrice}
-        href="/actrice"
-      />
-      <PathItem
-        title={dictionary.menu.modelo}
-        detail={dictionary.landing.pathModelo}
-        href="/modelo"
-      />
+      <PathItem title={dictionary.menu.actrice} href="/actrice" />
+      <PathItem title={dictionary.menu.modelo} href="/modelo" />
       <PathItem
         title={dictionary.menu.silverPresence}
-        detail={dictionary.landing.pathSilver}
         href="/silver-presence"
       />
-      <PathItem
-        title={dictionary.menu.contacto}
-        detail={dictionary.landing.pathContact}
-        href="/contacto"
-      />
+      <PathItem title={dictionary.menu.contacto} href="/contacto" />
     </section>
   );
 }
@@ -264,7 +252,7 @@ function StaticHero({ centerSrc }: { centerSrc: string }) {
       <div
         className={`relative z-10 flex h-full flex-col justify-end ${pagePadding} pb-10 pt-[calc(var(--nav-height)+1rem)] md:pb-14`}
       >
-        <div className={`${contentContainer} mx-auto w-full`}>
+        <div className={`${contentContainer} mx-auto w-full text-center`}>
           <h1 className={`${displayTitle} text-brand-ink`}>
             Sophie Gaëlle Gomez
           </h1>

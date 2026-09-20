@@ -26,7 +26,7 @@ export default function ContactoPage() {
       >
         <PageHeader title={dictionary.contacto.title} />
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+        <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-10">
           <section>
             <h2 className={sectionLabel}>{dictionary.contacto.actingMexico}</h2>
             <p className="mt-3 font-serif text-lg text-brand-ink">

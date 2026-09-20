@@ -5,26 +5,21 @@ type ProjectCardProps = {
   title: LocalizedValue;
   role: LocalizedValue;
   synopsis?: LocalizedValue;
-  year: string;
+  year?: string;
   videoUrl?: string;
   aspect: string;
   locale: Locale;
   placeholderLabel: string;
-  index?: number;
-  total?: number;
 };
 
 export function ProjectCard({
   title,
   role,
   synopsis,
-  year,
   videoUrl,
   aspect,
   locale,
   placeholderLabel,
-  index,
-  total,
 }: ProjectCardProps) {
   const localizedTitle = getLocalizedValue(title, locale);
   const localizedRole = getLocalizedValue(role, locale);
@@ -34,29 +29,27 @@ export function ProjectCard({
   const hasVideo = Boolean(videoUrl?.trim());
 
   return (
-    <article>
-      {hasVideo ? (
-        <VideoEmbed src={videoUrl!} title={localizedTitle} />
-      ) : (
-        <VideoPlaceholder label={placeholderLabel} aspect={aspect} />
-      )}
+    <article className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-12 lg:gap-16">
+      <div className="w-full md:w-[56%] md:shrink-0">
+        {hasVideo ? (
+          <VideoEmbed src={videoUrl!} title={localizedTitle} />
+        ) : (
+          <VideoPlaceholder label={placeholderLabel} aspect={aspect} />
+        )}
+      </div>
 
-      <div className="mt-4 flex items-start justify-between gap-4 font-sans text-sm tracking-wide">
-        <div className="space-y-1.5">
-          <h3 className="font-display text-lg text-brand-ink">{localizedTitle}</h3>
+      <div className="w-full text-left md:w-[40%] md:shrink-0 md:pt-1">
+        <div className="space-y-2">
+          <h3 className="font-display text-xl text-brand-ink md:text-2xl">
+            {localizedTitle}
+          </h3>
           <p className="font-serif text-brand-mute">{localizedRole}</p>
           {localizedSynopsis ? (
-            <p className="max-w-xl font-serif text-base leading-relaxed text-brand-mute">
+            <p className="text-justify font-serif text-base leading-relaxed text-brand-mute">
               {localizedSynopsis}
             </p>
           ) : null}
-          <p className="text-brand-soft">{year}</p>
         </div>
-        {index !== undefined && total !== undefined ? (
-          <span className="shrink-0 text-brand-soft">
-            {String(index).padStart(2, "0")}/{String(total).padStart(2, "0")}
-          </span>
-        ) : null}
       </div>
     </article>
   );

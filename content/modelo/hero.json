@@ -1,11 +1,11 @@
 {
   "id": "hero",
-  "src": "/images/modelo/hero.webp",
+  "src": "/images/modelo/editorial/l2650648.webp",
   "alt": {
     "fr": "Sophie Gomez — book modèle",
     "es": "Sophie Gomez — book modelo",
     "en": "Sophie Gomez — model book"
   },
   "credit": "",
-  "aspect": "aspect-[4/5] sm:aspect-[16/9]"
+  "aspect": "aspect-[3/4]"
 }

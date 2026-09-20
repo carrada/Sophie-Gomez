@@ -51,19 +51,21 @@ export default function ModeloPage() {
       >
         <PageHeader title={dictionary.modelo.title} />
 
-        <PhotoHero
-          photo={heroData}
-          locale={locale}
-          placeholderLabel={dictionary.common.photoPlaceholder}
-        />
-
-        <div className={`max-w-2xl space-y-4 ${bodyText}`}>
+        <div className={`mx-auto max-w-2xl space-y-4 ${bodyText}`}>
           {dictionary.modelo.bio.split("\n\n").map((paragraph) => (
             <p key={paragraph.slice(0, 48)}>{paragraph}</p>
           ))}
         </div>
 
-        <section className={sectionGap}>
+        <div className={`${sectionGap} mx-auto w-full max-w-xl md:max-w-2xl`}>
+          <PhotoHero
+            photo={heroData}
+            locale={locale}
+            placeholderLabel={dictionary.common.photoPlaceholder}
+          />
+        </div>
+
+        <section className={`${sectionGap} text-center`}>
           <h2 className={`mb-6 ${sectionLabel}`}>
             {dictionary.modelo.editorialTitle}
           </h2>
@@ -74,7 +76,7 @@ export default function ModeloPage() {
           />
         </section>
 
-        <section className={`${sectionGap} ${sectionDivider}`}>
+        <section className={`${sectionGap} ${sectionDivider} text-center`}>
           <h2 className={`mb-6 ${sectionLabel}`}>
             {dictionary.modelo.commercialTitle}
           </h2>
@@ -86,7 +88,7 @@ export default function ModeloPage() {
           />
         </section>
 
-        <section className={sectionGap}>
+        <section className={`${sectionGap} text-center`}>
           <a
             href={`mailto:${dictionary.modelo.contactEmail}`}
             className={`inline-block ${contactHeadline} transition-opacity hover:opacity-70`}

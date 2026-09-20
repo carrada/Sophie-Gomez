@@ -1,9 +1,20 @@
 {
   "photos": [
     {
-      "id": "img-4265",
-      "aspect": "aspect-[3/2]",
-      "src": "/images/modelo/commercial/img-4265.webp",
+      "id": "img-4269",
+      "aspect": "aspect-square",
+      "src": "/images/modelo/commercial/img-4269.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
+      "credit": ""
+    },
+    {
+      "id": "img-4271",
+      "aspect": "aspect-square",
+      "src": "/images/modelo/commercial/img-4271.webp",
       "alt": {
         "fr": "Commercial — Sophie Gomez",
         "es": "Comercial — Sophie Gomez",
@@ -37,39 +48,6 @@
       "id": "img-4268",
       "aspect": "aspect-square",
       "src": "/images/modelo/commercial/img-4268.webp",
-      "alt": {
-        "fr": "Commercial — Sophie Gomez",
-        "es": "Comercial — Sophie Gomez",
-        "en": "Commercial — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "img-4269",
-      "aspect": "aspect-square",
-      "src": "/images/modelo/commercial/img-4269.webp",
-      "alt": {
-        "fr": "Commercial — Sophie Gomez",
-        "es": "Comercial — Sophie Gomez",
-        "en": "Commercial — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "img-4270",
-      "aspect": "aspect-square",
-      "src": "/images/modelo/commercial/img-4270.webp",
-      "alt": {
-        "fr": "Commercial — Sophie Gomez",
-        "es": "Comercial — Sophie Gomez",
-        "en": "Commercial — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "img-4271",
-      "aspect": "aspect-square",
-      "src": "/images/modelo/commercial/img-4271.webp",
       "alt": {
         "fr": "Commercial — Sophie Gomez",
         "es": "Comercial — Sophie Gomez",

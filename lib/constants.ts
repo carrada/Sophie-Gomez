@@ -20,21 +20,21 @@ export const sectionBottomPadding = "pb-16 md:pb-20";
 export const sectionGap = "mt-12 md:mt-16";
 
 export const sectionLabel =
-  "font-sans text-xs font-medium uppercase tracking-brand text-brand-mute";
+  "text-center font-sans text-xs font-medium uppercase tracking-brand text-brand-mute";
 
 export const bodyText =
-  "font-serif text-base leading-relaxed text-brand-mute md:text-lg md:leading-relaxed";
+  "text-justify font-serif text-base leading-relaxed text-brand-mute md:text-lg md:leading-relaxed";
 
 export const displayTitle =
-  "font-display text-[clamp(2.5rem,10vw,4.75rem)] font-normal normal-case tracking-[-0.01em] leading-[1.05]";
+  "text-center font-display text-[clamp(2.5rem,10vw,4.75rem)] font-normal normal-case tracking-[-0.01em] leading-[1.05]";
 
 export const pageTitle =
-  "font-display text-3xl font-normal normal-case tracking-[-0.01em] sm:text-4xl md:text-5xl";
+  "text-center font-display text-3xl font-normal normal-case tracking-[-0.01em] sm:text-4xl md:text-5xl";
 
 export const contactHeadline =
-  "font-display text-2xl font-normal normal-case tracking-[-0.01em] leading-snug sm:text-3xl md:text-4xl";
+  "text-center font-display text-2xl font-normal normal-case tracking-[-0.01em] leading-snug sm:text-3xl md:text-4xl";
 
 export const sectionDivider = "border-t border-brand-line pt-12 md:pt-16";
 
 export const brandSubtitle =
-  "font-sans text-sm font-medium uppercase tracking-brand text-brand-subtitle md:text-base";
+  "text-center font-sans text-sm font-medium uppercase tracking-brand text-brand-subtitle md:text-base";

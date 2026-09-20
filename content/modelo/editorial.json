@@ -1,39 +1,6 @@
 {
   "photos": [
     {
-      "id": "headshot-1",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/editorial/headshot-1.webp",
-      "alt": {
-        "fr": "Headshot — Sophie Gomez",
-        "es": "Headshot — Sophie Gomez",
-        "en": "Headshot — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "headshot-3",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/editorial/headshot-3.webp",
-      "alt": {
-        "fr": "Headshot — Sophie Gomez",
-        "es": "Headshot — Sophie Gomez",
-        "en": "Headshot — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "portrait-3",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/editorial/portrait-3.webp",
-      "alt": {
-        "fr": "Portrait — Sophie Gomez",
-        "es": "Retrato — Sophie Gomez",
-        "en": "Portrait — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
       "id": "sg-02",
       "aspect": "aspect-[3/4]",
       "src": "/images/modelo/editorial/sg-02.webp",
@@ -114,50 +81,6 @@
       "id": "sg-43",
       "aspect": "aspect-[3/4]",
       "src": "/images/modelo/editorial/sg-43.webp",
-      "alt": {
-        "fr": "Éditorial — Sophie Gomez",
-        "es": "Editorial — Sophie Gomez",
-        "en": "Editorial — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "dsf-6539",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/editorial/dsf-6539.webp",
-      "alt": {
-        "fr": "Éditorial — Sophie Gomez",
-        "es": "Editorial — Sophie Gomez",
-        "en": "Editorial — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "dsf-6622",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/editorial/dsf-6622.webp",
-      "alt": {
-        "fr": "Éditorial — Sophie Gomez",
-        "es": "Editorial — Sophie Gomez",
-        "en": "Editorial — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "dsf-6725",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/editorial/dsf-6725.webp",
-      "alt": {
-        "fr": "Éditorial — Sophie Gomez",
-        "es": "Editorial — Sophie Gomez",
-        "en": "Editorial — Sophie Gomez"
-      },
-      "credit": ""
-    },
-    {
-      "id": "l2650648",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/editorial/l2650648.webp",
       "alt": {
         "fr": "Éditorial — Sophie Gomez",
         "es": "Editorial — Sophie Gomez",

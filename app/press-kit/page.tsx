@@ -33,9 +33,9 @@ export default function PressKitPage() {
       >
         <PageHeader title={dictionary.pressKit.title} />
 
-        <p className={`max-w-2xl ${bodyText}`}>{dictionary.pressKit.bio}</p>
+        <p className={`mx-auto max-w-2xl ${bodyText}`}>{dictionary.pressKit.bio}</p>
 
-        <div className="mt-8 md:mt-10">
+        <div className="mt-8 text-center md:mt-10">
           <PressDownload
             href={contactData.pressKitPdf}
             label={dictionary.pressKit.download}
@@ -43,7 +43,10 @@ export default function PressKitPage() {
         </div>
 
         {pages.length > 0 ? (
-          <section className={sectionGap} aria-label={dictionary.pressKit.previewTitle}>
+          <section
+            className={`${sectionGap} text-center`}
+            aria-label={dictionary.pressKit.previewTitle}
+          >
             <h2 className={`mb-6 ${sectionLabel}`}>
               {dictionary.pressKit.previewTitle}
             </h2>

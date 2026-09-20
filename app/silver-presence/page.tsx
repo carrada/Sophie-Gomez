@@ -29,13 +29,13 @@ export default function SilverPresencePage() {
       >
         <PageHeader title={dictionary.silverPresence.title} />
 
-        <div className={`max-w-2xl space-y-4 ${bodyText}`}>
+        <div className={`mx-auto max-w-2xl space-y-4 ${bodyText}`}>
           {dictionary.silverPresence.bio.split("\n\n").map((paragraph) => (
             <p key={paragraph.slice(0, 48)}>{paragraph}</p>
           ))}
         </div>
 
-        <section className={sectionGap}>
+        <section className={`${sectionGap} text-center`}>
           <h2 className={`mb-6 ${sectionLabel}`}>
             {dictionary.silverPresence.videoTitle}
           </h2>
@@ -55,7 +55,7 @@ export default function SilverPresencePage() {
               .filter((video) => video.videoUrl?.trim())
               .map((video) => (
                 <div key={video.id}>
-                  <h3 className="mb-4 font-sans text-sm tracking-wide text-brand-mute">
+                  <h3 className="mb-4 text-center font-sans text-sm tracking-wide text-brand-mute">
                     {getLocalizedValue(video.title, locale)}
                   </h3>
                   <VideoEmbed

@@ -7,7 +7,7 @@ type PageHeaderProps = {
 
 export function PageHeader({ title, label }: PageHeaderProps) {
   return (
-    <header className="mb-8 md:mb-10">
+    <header className="mb-8 text-center md:mb-10">
       {label && <p className={`mb-4 ${sectionLabel}`}>{label}</p>}
       <h1 className={pageTitle}>{title}</h1>
     </header>

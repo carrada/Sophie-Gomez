@@ -11,7 +11,7 @@ type SectionLinksProps = {
 
 export function SectionLinks({ links }: SectionLinksProps) {
   return (
-    <nav className="mt-8 flex flex-col gap-2 md:mt-10 md:flex-row md:gap-8">
+    <nav className="mt-8 flex flex-col items-center gap-2 md:mt-10 md:flex-row md:justify-center md:gap-8">
       {links.map((link) => (
         <a
           key={link.href + link.label}

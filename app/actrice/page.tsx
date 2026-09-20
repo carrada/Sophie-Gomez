@@ -25,7 +25,6 @@ function externalLink(href: string, label: string, primary = false) {
 export default function ActricePage() {
   const { dictionary, locale } = useLanguage();
   const hasDemoReel = Boolean(actriceData.demoReel?.trim());
-  const projectTotal = actriceData.projects.length;
 
   const links = [
     {
@@ -50,13 +49,13 @@ export default function ActricePage() {
       >
         <PageHeader title={dictionary.actrice.title} />
 
-        <div className={`max-w-2xl space-y-4 ${bodyText}`}>
+        <div className={`mx-auto max-w-2xl space-y-4 ${bodyText}`}>
           {dictionary.actrice.bio.split("\n\n").map((paragraph) => (
             <p key={paragraph.slice(0, 48)}>{paragraph}</p>
           ))}
         </div>
 
-        <section className={sectionGap}>
+        <section className={`${sectionGap} text-center`}>
           <h2 className={`mb-6 ${sectionLabel}`}>
             {dictionary.actrice.demoReelTitle}
           </h2>
@@ -77,11 +76,11 @@ export default function ActricePage() {
         </section>
 
         <section className={sectionGap}>
-          <h2 className={`mb-6 ${sectionLabel}`}>
+          <h2 className={`mb-6 text-center ${sectionLabel}`}>
             {dictionary.actrice.projectsTitle}
           </h2>
-          <ul className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            {actriceData.projects.map((project, index) => (
+          <ul className="flex flex-col gap-16 md:gap-24">
+            {actriceData.projects.map((project) => (
               <li key={project.id}>
                 <ProjectCard
                   title={project.title}
@@ -92,8 +91,6 @@ export default function ActricePage() {
                   aspect={project.aspect}
                   locale={locale}
                   placeholderLabel={dictionary.common.videoPlaceholder}
-                  index={index + 1}
-                  total={projectTotal}
                 />
               </li>
             ))}
