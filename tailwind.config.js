@@ -12,6 +12,7 @@ const config = {
     "aspect-[3/2]",
     "aspect-[4/5]",
     "aspect-[16/9]",
+    "aspect-[612/792]",
     "aspect-square",
     "sm:aspect-[16/9]",
   ],

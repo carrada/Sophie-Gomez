@@ -64,8 +64,9 @@
   },
   "pressKit": {
     "title": "Press kit",
-    "bio": "Ressources presse : biographie, photos haute définition et crédits pour médias et casting.",
+    "bio": "Ressources presse : biographie, filmographie et crédits pour médias et casting.",
     "download": "Télécharger le PDF",
+    "previewTitle": "Aperçu",
     "photosTitle": "Photos presse"
   },
   "contacto": {
