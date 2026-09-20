@@ -29,7 +29,11 @@ export default function SilverPresencePage() {
       >
         <PageHeader title={dictionary.silverPresence.title} />
 
-        <p className={`max-w-2xl ${bodyText}`}>{dictionary.silverPresence.bio}</p>
+        <div className={`max-w-2xl space-y-4 ${bodyText}`}>
+          {dictionary.silverPresence.bio.split("\n\n").map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+          ))}
+        </div>
 
         <section className={sectionGap}>
           <h2 className={`mb-6 ${sectionLabel}`}>

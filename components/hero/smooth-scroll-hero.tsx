@@ -70,37 +70,14 @@ function HeroBrandOverlay() {
   );
 }
 
-function useIsDesktop() {
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(min-width: 1024px)");
-    const update = () => setIsDesktop(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
-
-  return isDesktop;
-}
-
 function CenterImage({ centerSrc }: { centerSrc: string }) {
   const { scrollY } = useScroll();
   const { dictionary } = useLanguage();
-  const isDesktop = useIsDesktop();
 
   const clip1 = useTransform(scrollY, [0, 1500], [25, 0]);
   const clip2 = useTransform(scrollY, [0, 1500], [75, 100]);
   const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`;
 
-  // Desktop: llenar por altura (sin zoom agresivo) para ver el retrato completo
-  const startSize = isDesktop ? "auto 105%" : "145%";
-  const endSize = isDesktop ? "auto 100%" : "100%";
-  const backgroundSize = useTransform(
-    scrollY,
-    [0, SECTION_HEIGHT + 500],
-    [startSize, endSize],
-  );
   const opacity = useTransform(
     scrollY,
     [SECTION_HEIGHT, SECTION_HEIGHT + 500],
@@ -109,14 +86,11 @@ function CenterImage({ centerSrc }: { centerSrc: string }) {
 
   return (
     <motion.div
-      className="absolute inset-0"
+      className="absolute inset-0 bg-no-repeat max-lg:bg-cover max-lg:bg-center lg:bg-[length:auto_105%] lg:bg-[center_18%]"
       style={{
         clipPath,
-        backgroundSize,
         opacity,
         backgroundImage: `url(${centerSrc})`,
-        backgroundPosition: isDesktop ? "center 18%" : "center",
-        backgroundRepeat: "no-repeat",
       }}
       role="img"
       aria-label={dictionary.landing.photoPlaceholder}
@@ -144,8 +118,8 @@ function ParallaxImg({
     offset: [`${start}px end`, `end ${end * -1}px`],
   });
 
-  const opacity = useTransform(scrollYProgress, [0.55, 1], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0.55, 1], [1, 0.92]);
+  const opacity = useTransform(scrollYProgress, [0.45, 0.9], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0.45, 0.9], [1, 0.92]);
   const y = useTransform(scrollYProgress, [0, 1], [start, end]);
   const transform = useMotionTemplate`translateY(${y}px) scale(${scale})`;
 
@@ -155,8 +129,8 @@ function ParallaxImg({
       src={src}
       alt={alt}
       className={[
-        "relative mb-12 block object-cover",
-        "max-h-[46vh] md:mb-16 md:max-h-[40vh] lg:max-h-[36vh]",
+        "relative mb-12 block object-cover last:mb-0",
+        "max-h-[46vh] md:mb-16 md:max-h-[72vh] md:last:mb-0 lg:max-h-[68vh]",
         className,
       ]
         .filter(Boolean)
@@ -171,7 +145,7 @@ function ParallaxImages({ items }: { items: ParallaxItem[] }) {
   const { locale } = useLanguage();
 
   return (
-    <div className="relative z-10 mx-auto max-w-5xl px-4 pb-28 pt-[180px] md:pb-40 md:pt-[220px]">
+    <div className="relative z-10 mx-auto max-w-5xl px-4 pb-28 pt-[180px] md:pb-24 md:pt-[220px]">
       {items.map((item) => (
         <ParallaxImg
           key={item.src}
@@ -190,12 +164,10 @@ function PathItem({
   title,
   detail,
   href,
-  label,
 }: {
   title: string;
   detail: string;
   href: string;
-  label: string;
 }) {
   return (
     <motion.div
@@ -207,19 +179,14 @@ function PathItem({
     >
       <Link
         href={href}
-        className="group flex items-center justify-between gap-4 transition-opacity hover:opacity-80"
+        className="group block transition-opacity hover:opacity-80"
       >
-        <div>
-          <p className="mb-1.5 font-display text-2xl text-brand-ink md:text-3xl">
-            {title}
-          </p>
-          <p className="font-sans text-sm font-medium uppercase tracking-brand text-brand-mute">
-            {detail}
-          </p>
-        </div>
-        <span className="shrink-0 text-end font-sans text-xs font-medium uppercase tracking-brand text-brand-soft transition-colors group-hover:text-brand-ink md:text-sm">
-          {label} →
-        </span>
+        <p className="mb-1.5 font-display text-2xl text-brand-ink md:text-3xl">
+          {title}
+        </p>
+        <p className="font-sans text-sm font-medium uppercase tracking-brand text-brand-mute">
+          {detail}
+        </p>
       </Link>
     </motion.div>
   );
@@ -243,39 +210,37 @@ function IntroSection() {
         {dictionary.landing.introTitle}
       </motion.h2>
 
-      <motion.p
+      <motion.div
         initial={{ y: 32, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
         viewport={{ once: true, amount: 0.4 }}
-        className={`mb-16 max-w-2xl ${bodyText} md:mb-20`}
+        className={`mb-16 max-w-2xl space-y-4 ${bodyText} md:mb-20`}
       >
-        {dictionary.landing.bio}
-      </motion.p>
+        {dictionary.landing.bio.split("\n\n").map((paragraph) => (
+          <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+        ))}
+      </motion.div>
 
       <PathItem
         title={dictionary.menu.actrice}
         detail={dictionary.landing.pathActrice}
         href="/actrice"
-        label={dictionary.landing.ctaActrice}
       />
       <PathItem
         title={dictionary.menu.modelo}
         detail={dictionary.landing.pathModelo}
         href="/modelo"
-        label={dictionary.landing.ctaModelo}
       />
       <PathItem
         title={dictionary.menu.silverPresence}
         detail={dictionary.landing.pathSilver}
         href="/silver-presence"
-        label={dictionary.landing.silverPresenceLink}
       />
       <PathItem
         title={dictionary.menu.contacto}
         detail={dictionary.landing.pathContact}
         href="/contacto"
-        label={dictionary.landing.pathLabel}
       />
     </section>
   );

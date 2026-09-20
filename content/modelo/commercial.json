@@ -1,45 +1,80 @@
 {
   "photos": [
     {
-      "id": "c1",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/commercial/c1.webp",
-      "alt": { "fr": "Commercial — campagne 1", "es": "Comercial — campaña 1" },
+      "id": "img-4265",
+      "aspect": "aspect-[3/2]",
+      "src": "/images/modelo/commercial/img-4265.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
       "credit": ""
     },
     {
-      "id": "c2",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/commercial/c2.webp",
-      "alt": { "fr": "Commercial — campagne 2", "es": "Comercial — campaña 2" },
+      "id": "img-4266",
+      "aspect": "aspect-[3/2]",
+      "src": "/images/modelo/commercial/img-4266.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
       "credit": ""
     },
     {
-      "id": "c3",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/commercial/c3.webp",
-      "alt": { "fr": "Commercial — campagne 3", "es": "Comercial — campaña 3" },
+      "id": "img-4267",
+      "aspect": "aspect-[3/2]",
+      "src": "/images/modelo/commercial/img-4267.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
       "credit": ""
     },
     {
-      "id": "c4",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/commercial/c4.webp",
-      "alt": { "fr": "Commercial — campagne 4", "es": "Comercial — campaña 4" },
+      "id": "img-4268",
+      "aspect": "aspect-square",
+      "src": "/images/modelo/commercial/img-4268.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
       "credit": ""
     },
     {
-      "id": "c5",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/commercial/c5.webp",
-      "alt": { "fr": "Commercial — campagne 5", "es": "Comercial — campaña 5" },
+      "id": "img-4269",
+      "aspect": "aspect-square",
+      "src": "/images/modelo/commercial/img-4269.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
       "credit": ""
     },
     {
-      "id": "c6",
-      "aspect": "aspect-[3/4]",
-      "src": "/images/modelo/commercial/c6.webp",
-      "alt": { "fr": "Commercial — campagne 6", "es": "Comercial — campaña 6" },
+      "id": "img-4270",
+      "aspect": "aspect-square",
+      "src": "/images/modelo/commercial/img-4270.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
+      "credit": ""
+    },
+    {
+      "id": "img-4271",
+      "aspect": "aspect-square",
+      "src": "/images/modelo/commercial/img-4271.webp",
+      "alt": {
+        "fr": "Commercial — Sophie Gomez",
+        "es": "Comercial — Sophie Gomez",
+        "en": "Commercial — Sophie Gomez"
+      },
       "credit": ""
     }
   ]

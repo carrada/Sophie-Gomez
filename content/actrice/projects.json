@@ -1,85 +1,167 @@
 {
-  "demoReel": "",
+  "demoReel": "/videos/actrice/demo-reel.mp4",
   "demoReelPoster": "/images/actrice/demo-reel-poster.webp",
   "photos": [
     {
       "id": "a1",
       "aspect": "aspect-[3/4]",
       "src": "/images/actrice/headshot-1.webp",
-      "alt": { "fr": "Portrait actrice", "es": "Retrato actriz" },
+      "alt": {
+        "fr": "Portrait actrice",
+        "es": "Retrato actriz",
+        "en": "Actress portrait"
+      },
       "credit": ""
     },
     {
       "id": "a2",
       "aspect": "aspect-[3/4]",
       "src": "/images/actrice/headshot-2.webp",
-      "alt": { "fr": "Portrait actrice", "es": "Retrato actriz" },
+      "alt": {
+        "fr": "Portrait actrice",
+        "es": "Retrato actriz",
+        "en": "Actress portrait"
+      },
       "credit": ""
     },
     {
       "id": "a3",
       "aspect": "aspect-video",
       "src": "/images/actrice/still-1.webp",
-      "alt": { "fr": "Still actrice", "es": "Still actriz" },
+      "alt": {
+        "fr": "Still actrice",
+        "es": "Still actriz",
+        "en": "Actress still"
+      },
       "credit": ""
     }
   ],
   "projects": [
     {
-      "id": "p1",
-      "title": { "fr": "Les Heures Brisées", "es": "Las Horas Rotas" },
-      "role": { "fr": "Long métrage / Protagoniste", "es": "Largometraje / Protagonista" },
-      "year": "2025",
-      "aspect": "aspect-video",
-      "videoUrl": ""
-    },
-    {
-      "id": "p2",
-      "title": { "fr": "Silence sur la Place", "es": "Silencio en la Plaza" },
-      "role": { "fr": "Court métrage / Protagoniste", "es": "Cortometraje / Protagonista" },
-      "year": "2024",
-      "aspect": "aspect-[3/4]",
-      "videoUrl": ""
-    },
-    {
-      "id": "p3",
-      "title": { "fr": "Théâtre UNAM", "es": "Teatro UNAM" },
-      "role": { "fr": "Pièce de théâtre / Distribution principale", "es": "Obra de teatro / Elenco principal" },
+      "id": "aire",
+      "title": {
+        "fr": "AIRE, Just Breathe — Leticia Tonos Paniagua",
+        "es": "AIRE, Just Breathe — Leticia Tonos Paniagua",
+        "en": "AIRE, Just Breathe — Leticia Tonos Paniagua"
+      },
+      "role": {
+        "fr": "Tania · Long métrage · 2023",
+        "es": "Tania · Largometraje · 2023",
+        "en": "Tania · Feature film · 2023"
+      },
+      "synopsis": {
+        "fr": "Seule dans un bunker, elle tient entre ses mains la survie de l'humanité. Entre méfiance et détermination, un jeu tout en tension contenue, au cœur d'une science-fiction dystopique. Nomination meilleure actrice européenne, Septimius Award, Amsterdam.",
+        "es": "Sola en un búnker, sostiene entre sus manos la supervivencia de la humanidad. Entre la desconfianza y la determinación, una actuación de tensión contenida, en una película de ciencia ficción distópica. Nominación a mejor actriz europea, Septimius Award, Amsterdam.",
+        "en": "Alone in a bunker, she holds humanity's survival in her hands. Between distrust and determination, a performance of contained tension, in a dystopian science-fiction film. Best European actress nominee, Septimius Award, Amsterdam."
+      },
       "year": "2023",
       "aspect": "aspect-video",
       "videoUrl": ""
     },
     {
-      "id": "p4",
-      "title": { "fr": "Lumière du Matin", "es": "Luz del Amanecer" },
-      "role": { "fr": "Série / Second rôle", "es": "Serie / Secundario" },
-      "year": "2022",
-      "aspect": "aspect-[3/4]",
-      "videoUrl": ""
-    },
-    {
-      "id": "p5",
-      "title": { "fr": "Entre les Lignes", "es": "Entre Líneas" },
-      "role": { "fr": "Série / Présentatrice", "es": "Serie / Conductora" },
-      "year": "2022",
-      "aspect": "aspect-[3/4]",
-      "videoUrl": ""
-    },
-    {
-      "id": "p6",
-      "title": { "fr": "Fragments", "es": "Fragmentos" },
-      "role": { "fr": "Long métrage / Second rôle", "es": "Largometraje / Secundario" },
-      "year": "2021",
+      "id": "bitch",
+      "title": {
+        "fr": "BITCH — Massimo Audiello",
+        "es": "BITCH — Massimo Audiello",
+        "en": "BITCH — Massimo Audiello"
+      },
+      "role": {
+        "fr": "Camille · Court métrage · 2017",
+        "es": "Camille · Cortometraje · 2017",
+        "en": "Camille · Short film · 2017"
+      },
+      "synopsis": {
+        "fr": "Dans cet élégant fashion film, elle incarne une figure de pouvoir aussi froide que redoutée, qui domine l'impitoyable monde de l'art. Une dispute explosive avec sa compagne la fait basculer de la maîtrise totale à la déchéance.",
+        "es": "En este elegante fashion film, interpreta a una figura de poder tan fría como temida, que domina el implacable mundo del arte. Una disputa explosiva con su pareja la hace caer del control absoluto al colapso.",
+        "en": "In this elegant fashion film, she plays a powerful figure as cold as she is feared, ruling over the ruthless art world. An explosive fight with her partner sends her spiraling from total control to ruin."
+      },
+      "year": "2017",
       "aspect": "aspect-video",
-      "videoUrl": ""
+      "videoUrl": "/videos/actrice/bitch.mp4"
     },
     {
-      "id": "p7",
-      "title": { "fr": "Silence sur la Place — scène", "es": "Silencio en la Plaza — escena" },
-      "role": { "fr": "Extrait scénique", "es": "Extracto escénico" },
-      "year": "2024",
+      "id": "au-revoir",
+      "title": {
+        "fr": "AU REVOIR — Ronni Castillo",
+        "es": "AU REVOIR — Ronni Castillo",
+        "en": "AU REVOIR — Ronni Castillo"
+      },
+      "role": {
+        "fr": "Paz · Long métrage · 2025",
+        "es": "Paz · Largometraje · 2025",
+        "en": "Paz · Feature film · 2025"
+      },
+      "synopsis": {
+        "fr": "Délaissée par son mari, elle mène une double vie pour se sentir enfin vivante. Un jeu sensible et lumineux, débordant de vie, au cœur d'un drame intime.",
+        "es": "Desatendida por su marido, lleva una doble vida para sentirse por fin viva. Una actuación sensible y luminosa, llena de vida, en un drama íntimo.",
+        "en": "Neglected by her husband, she leads a double life to finally feel alive. A sensitive, radiant performance, full of life, in an intimate drama."
+      },
+      "year": "2025",
       "aspect": "aspect-video",
-      "videoUrl": ""
+      "videoUrl": "/videos/actrice/au-revoir.mp4"
+    },
+    {
+      "id": "nou-pat-nan-dieu",
+      "title": {
+        "fr": "NOU PAT NAN DIEU — Francisco Vargas",
+        "es": "NOU PAT NAN DIEU — Francisco Vargas",
+        "en": "NOU PAT NAN DIEU — Francisco Vargas"
+      },
+      "role": {
+        "fr": "Sophie Julien · Long métrage · 2025",
+        "es": "Sophie Julien · Largometraje · 2025",
+        "en": "Sophie Julien · Feature film · 2025"
+      },
+      "synopsis": {
+        "fr": "Médecin honnête et engagée, elle découvre que son ONG cache un trafic d'enfants — une vérité qui la met en danger. Un jeu d'un naturel brut, au cœur d'une fiction en noir et blanc à l'allure de documentaire.",
+        "es": "Doctora honesta y comprometida, descubre que su ONG esconde una red de tráfico de niños — una verdad que la pone en peligro. Una actuación de un naturalismo crudo, en una ficción en blanco y negro con apariencia de documental.",
+        "en": "An honest, committed doctor, she discovers her NGO is a front for child trafficking — a truth that puts her in danger. A raw, naturalistic performance, in a black-and-white fiction that looks like a documentary."
+      },
+      "year": "2025",
+      "aspect": "aspect-video",
+      "videoUrl": "/videos/actrice/nou-pat-nan-dieu.mp4"
+    },
+    {
+      "id": "monarca",
+      "title": {
+        "fr": "MONARCA",
+        "es": "MONARCA",
+        "en": "MONARCA"
+      },
+      "role": {
+        "fr": "Amelia Fritz · Série · 2018-2020",
+        "es": "Amelia Fritz · Serie · 2018-2020",
+        "en": "Amelia Fritz · TV series · 2018-2020"
+      },
+      "synopsis": {
+        "fr": "Conseillère financière de l'élite internationale, elle évolue dans les sphères de pouvoir. Un jeu précis pour un personnage froid et calculateur, où la loyauté ne suit que l'intérêt, dans le monde des riches familles mexicaines.",
+        "es": "Asesora financiera de la élite internacional, se mueve en las esferas del poder. Una actuación precisa para un personaje frío y calculador, cuya lealtad solo sigue al interés, dentro del mundo de las familias mexicanas más adineradas.",
+        "en": "Financial advisor to the international elite, she moves through the corridors of power. A precise performance as a cold, calculating character whose loyalty follows only self-interest, in the world of Mexico's wealthiest families."
+      },
+      "year": "2018-2020",
+      "aspect": "aspect-video",
+      "videoUrl": "/videos/actrice/monarca.mp4"
+    },
+    {
+      "id": "rosario-tijeras",
+      "title": {
+        "fr": "ROSARIO TIJERAS",
+        "es": "ROSARIO TIJERAS",
+        "en": "ROSARIO TIJERAS"
+      },
+      "role": {
+        "fr": "Marta de Bétancourt · Série · 2016-2018",
+        "es": "Marta de Betancourt · Serie · 2016-2018",
+        "en": "Marta de Bethancourt · TV series · 2016-2018"
+      },
+      "synopsis": {
+        "fr": "Snob et alcoolique, figure de la haute société mexicaine, déconnectée du réel. Quelques pointes d'humour viennent compléter un large spectre d'émotions, déployé sur deux saisons au cœur d'un drame criminel.",
+        "es": "Esnob y alcohólica, figura de la alta sociedad mexicana, desconectada de la realidad. Algunos toques de humor completan un amplio espectro emocional, desplegado a lo largo de dos temporadas de este drama criminal.",
+        "en": "Snob and alcoholic, a figure of Mexican high society, disconnected from reality. A few touches of humor round out a wide emotional range, unfolding across two seasons of this crime drama."
+      },
+      "year": "2016-2018",
+      "aspect": "aspect-video",
+      "videoUrl": "/videos/actrice/rosario-tijeras.mp4"
     }
   ]
 }

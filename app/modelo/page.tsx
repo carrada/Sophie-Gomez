@@ -57,7 +57,11 @@ export default function ModeloPage() {
           placeholderLabel={dictionary.common.photoPlaceholder}
         />
 
-        <p className={`max-w-2xl ${bodyText}`}>{dictionary.modelo.bio}</p>
+        <div className={`max-w-2xl space-y-4 ${bodyText}`}>
+          {dictionary.modelo.bio.split("\n\n").map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+          ))}
+        </div>
 
         <section className={sectionGap}>
           <h2 className={`mb-6 ${sectionLabel}`}>
@@ -78,6 +82,7 @@ export default function ModeloPage() {
             photos={commercialData.photos}
             label={dictionary.common.photoPlaceholder}
             locale={locale}
+            columns="2"
           />
         </section>
 

@@ -9,7 +9,15 @@ type VideoEmbedProps = {
   poster?: string;
   watchLabel?: string;
   className?: string;
+  loop?: boolean;
 };
+
+function isLocalVideo(src: string) {
+  return (
+    src.startsWith("/") &&
+    /\.(mp4|webm|ogg|mov)(\?.*)?$/i.test(src)
+  );
+}
 
 function withAutoplayParams(url: string) {
   try {
@@ -40,9 +48,12 @@ export function VideoEmbed({
   poster = "",
   watchLabel = "Play",
   className = "",
+  loop = false,
 }: VideoEmbedProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
+  const local = isLocalVideo(src);
+  const posterSrc = poster.trim();
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 767px)");
@@ -52,13 +63,32 @@ export function VideoEmbed({
     return () => mediaQuery.removeEventListener("change", update);
   }, []);
 
-  const posterSrc = poster.trim();
-  const usePosterGate = isMobile && Boolean(posterSrc) && !showIframe;
+  const usePosterGate =
+    !local && isMobile && Boolean(posterSrc) && !showIframe;
 
   const iframeSrc = useMemo(
     () => (isMobile ? src : withAutoplayParams(src)),
     [isMobile, src],
   );
+
+  if (local) {
+    return (
+      <div className={`relative aspect-video w-full bg-brand-line ${className}`}>
+        <video
+          className="absolute inset-0 h-full w-full object-contain bg-brand-graphite"
+          controls
+          preload="metadata"
+          playsInline
+          loop={loop}
+          poster={posterSrc || undefined}
+          title={title}
+          aria-label={title}
+        >
+          <source src={src} type="video/mp4" />
+        </video>
+      </div>
+    );
+  }
 
   if (usePosterGate) {
     return (

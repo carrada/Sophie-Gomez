@@ -12,7 +12,7 @@
       },
       "start": -160,
       "end": 180,
-      "className": "w-[42%] max-w-[240px] md:w-[30%] md:max-w-[260px]"
+      "className": "mx-auto w-[42%] max-w-[240px] md:mx-0 md:mr-auto md:w-[42%] md:max-w-[420px]"
     },
     {
       "src": "/images/hero/03-head-shot-3-1.png",
@@ -23,7 +23,7 @@
       },
       "start": 140,
       "end": -180,
-      "className": "mx-auto w-[58%] max-w-[340px] md:w-[42%] md:max-w-[380px]"
+      "className": "mx-auto w-[58%] max-w-[340px] md:w-[62%] md:max-w-[620px]"
     },
     {
       "src": "/images/hero/04-dsf6539.jpg",
@@ -34,7 +34,7 @@
       },
       "start": -140,
       "end": 160,
-      "className": "ml-auto w-[40%] max-w-[230px] md:w-[28%] md:max-w-[250px]"
+      "className": "mx-auto w-[40%] max-w-[230px] md:mx-0 md:ml-auto md:w-[36%] md:max-w-[360px]"
     },
     {
       "src": "/images/hero/05-dsf6622.jpg",
@@ -45,18 +45,7 @@
       },
       "start": 80,
       "end": -220,
-      "className": "ml-8 w-[48%] max-w-[280px] md:ml-16 md:w-[34%] md:max-w-[300px]"
-    },
-    {
-      "src": "/images/hero/06-headshot-1.jpg",
-      "alt": {
-        "fr": "Sophie Gaëlle Gomez — headshot",
-        "es": "Sophie Gaëlle Gomez — headshot",
-        "en": "Sophie Gaëlle Gomez — headshot"
-      },
-      "start": 100,
-      "end": -80,
-      "className": "mr-auto w-[44%] max-w-[250px] md:w-[30%] md:max-w-[270px]"
+      "className": "mx-auto w-[48%] max-w-[280px] md:mx-0 md:mr-auto md:w-[50%] md:max-w-[520px]"
     }
   ]
 }

@@ -7,7 +7,6 @@ import { SectionLinks } from "@/components/content/section-links";
 import { useLanguage } from "@/components/i18n/language-provider";
 import { PageHeader } from "@/components/layout/page-header";
 import { PageShell } from "@/components/layout/site-nav";
-import { PhotoGrid } from "@/components/media/photo-grid";
 import { VideoEmbed, VideoPlaceholder } from "@/components/media/video-embed";
 import {
   bodyText,
@@ -51,7 +50,11 @@ export default function ActricePage() {
       >
         <PageHeader title={dictionary.actrice.title} />
 
-        <p className={`max-w-2xl ${bodyText}`}>{dictionary.actrice.bio}</p>
+        <div className={`max-w-2xl space-y-4 ${bodyText}`}>
+          {dictionary.actrice.bio.split("\n\n").map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+          ))}
+        </div>
 
         <section className={sectionGap}>
           <h2 className={`mb-6 ${sectionLabel}`}>
@@ -63,6 +66,7 @@ export default function ActricePage() {
               title={dictionary.actrice.demoReelTitle}
               poster={actriceData.demoReelPoster}
               watchLabel={dictionary.common.watchReel}
+              loop
             />
           ) : (
             <VideoPlaceholder
@@ -70,17 +74,6 @@ export default function ActricePage() {
               aspect="aspect-video"
             />
           )}
-        </section>
-
-        <section className={sectionGap}>
-          <h2 className={`mb-6 ${sectionLabel}`}>
-            {dictionary.actrice.photosTitle}
-          </h2>
-          <PhotoGrid
-            photos={actriceData.photos}
-            label={dictionary.common.photoPlaceholder}
-            locale={locale}
-          />
         </section>
 
         <section className={sectionGap}>
@@ -93,6 +86,7 @@ export default function ActricePage() {
                 <ProjectCard
                   title={project.title}
                   role={project.role}
+                  synopsis={project.synopsis}
                   year={project.year}
                   videoUrl={project.videoUrl}
                   aspect={project.aspect}

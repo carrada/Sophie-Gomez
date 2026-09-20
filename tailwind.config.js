@@ -5,6 +5,15 @@ const config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./lib/**/*.{js,ts}",
+    "./content/**/*.json",
+  ],
+  safelist: [
+    "aspect-[3/4]",
+    "aspect-[3/2]",
+    "aspect-[4/5]",
+    "aspect-[16/9]",
+    "aspect-square",
+    "sm:aspect-[16/9]",
   ],
   theme: {
     extend: {
